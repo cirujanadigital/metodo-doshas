@@ -27,7 +27,8 @@
 <!-- PRECONNECT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 
 <!-- SCHEMA MARKUP -->
 <script type="application/ld+json">
@@ -305,17 +306,6 @@ nav.scrolled {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.hero-organic {
-  position: absolute;
-  bottom: -60px;
-  right: -60px;
-  width: 300px;
-  height: 300px;
-  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-  background: rgba(249,245,239,0.15);
-  z-index: 2;
 }
 
 .hero-badge {
@@ -800,7 +790,7 @@ nav.scrolled {
   margin-bottom: 32px;
 }
 
-.program-includes h4 {
+.program-includes-label {
   font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 500;
@@ -1189,6 +1179,11 @@ nav.scrolled {
   color: rgba(255,255,255,0.8);
   transition: color 0.2s;
   gap: 16px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-body);
 }
 
 .faq-question:hover { color: var(--white); }
@@ -1719,7 +1714,7 @@ footer {
 
   .about-grid { grid-template-columns: 1fr; }
   .about-image-wrap { max-width: 400px; }
-  .about-credential-card { position: static; margin-top: 16px; }
+  .about-credential-card { margin-top: 16px; }
 
   .method-steps { grid-template-columns: 1fr 1fr; }
 
@@ -1893,16 +1888,15 @@ footer {
   </div>
 
   <div class="hero-right" aria-hidden="true">
-    <img
+<img
   src="img/foto-mariajose.webp"
   alt="María José Guerra Valdés — Nutricionista digestiva Barcelona"
   width="800"
   height="1000"
   loading="eager"
   fetchpriority="high"
-  style="width:100%;height:100%;object-fit:cover;display:block;"
->
-    <div class="hero-organic" aria-hidden="true"></div>
+  sizes="(max-width: 768px) 100vw, 50vw"
+  style="width:100%;height:100%;object-fit:cover;display:block;">
   </div>
 </section>
 
@@ -2082,7 +2076,7 @@ footer {
         </p>
 
         <div class="program-includes">
-          <h4>Incluye</h4>
+            <p class="program-includes-label">Incluye</p>
           <ul class="program-list">
             <li>Evaluación inicial completa 90 minutos (caso digestivo)</li>
             <li>Diagnóstico integrativo + tipo Dosha</li>
@@ -2268,7 +2262,7 @@ footer {
 
       <div class="faq-items fade-up" role="list">
         <div class="faq-item" role="listitem">
-          <div class="faq-question" tabindex="0" aria-expanded="false">
+          <button class="faq-question" aria-expanded="false">
             ¿Qué es exactamente el Método Doshas?
             <span class="faq-toggle" aria-hidden="true">+</span>
           </div>
@@ -2280,7 +2274,7 @@ footer {
         </div>
 
         <div class="faq-item" role="listitem">
-          <div class="faq-question" tabindex="0" aria-expanded="false">
+          <button class="faq-question" aria-expanded="false">
             ¿Puedo seguir el programa si vivo fuera de Barcelona?
             <span class="faq-toggle" aria-hidden="true">+</span>
           </div>
@@ -2292,7 +2286,7 @@ footer {
         </div>
 
         <div class="faq-item" role="listitem">
-          <div class="faq-question" tabindex="0" aria-expanded="false">
+            <button class="faq-question" aria-expanded="false">
             ¿El Método Doshas puede ayudarme si tengo SIBO confirmado?
             <span class="faq-toggle" aria-hidden="true">+</span>
           </div>
@@ -2304,7 +2298,7 @@ footer {
         </div>
 
         <div class="faq-item" role="listitem">
-          <div class="faq-question" tabindex="0" aria-expanded="false">
+          <button class="faq-question" aria-expanded="false">
             ¿Cuánto tiempo tarda en verse resultados?
             <span class="faq-toggle" aria-hidden="true">+</span>
           </div>
@@ -2316,7 +2310,7 @@ footer {
         </div>
 
         <div class="faq-item" role="listitem">
-          <div class="faq-question" tabindex="0" aria-expanded="false">
+          <button class="faq-question" aria-expanded="false">
             ¿Necesito dejar mi medicación para seguir el programa?
             <span class="faq-toggle" aria-hidden="true">+</span>
           </div>
@@ -2328,7 +2322,7 @@ footer {
         </div>
 
         <div class="faq-item" role="listitem">
-          <div class="faq-question" tabindex="0" aria-expanded="false">
+          <button class="faq-question" aria-expanded="false">
             ¿La evaluación inicial es realmente gratuita?
             <span class="faq-toggle" aria-hidden="true">+</span>
           </div>
