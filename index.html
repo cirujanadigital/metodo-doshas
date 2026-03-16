@@ -224,7 +224,8 @@ nav.scrolled {
   color: var(--ink-mid);
   transition: color 0.2s;
   position: relative;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+  display: inline-block;
 }
 .nav-links a::after {
   content: '';
@@ -240,11 +241,15 @@ nav.scrolled {
 .nav-cta {
   background: var(--sage-dark);
   color: var(--white) !important;
-  padding: 10px 22px;
+  padding: 10px 22px !important;
   font-size: 0.72rem !important;
   letter-spacing: 0.12em !important;
   transition: background 0.3s !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
 }
+.nav-cta::after { display: none !important; }
 
 .nav-cta:hover { background: var(--ink) !important; }
 
@@ -636,6 +641,86 @@ nav.scrolled {
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   color: var(--sage-dark);
+}
+
+/* SECCIÓN HOMBRES */
+.men-section {
+  padding: 120px 0;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.men-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.men-content .eyebrow { color: var(--sage-light); }
+
+.men-content h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--white);
+  margin: 12px 0 24px;
+}
+
+.men-content h2 em { color: var(--sage-light); }
+
+.men-content p {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+
+.men-tagline {
+  font-family: var(--font-display);
+  font-size: 1.1rem !important;
+  font-style: italic;
+  color: var(--terra-light) !important;
+  margin: 24px 0 32px !important;
+}
+
+.men-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.men-tag {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 16px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.men-tag:hover {
+  border-color: rgba(122,158,126,0.4);
+  background: rgba(122,158,126,0.08);
+  color: var(--white);
+}
+
+.men-quote {
+  border-left: 3px solid var(--sage);
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.03);
+}
+
+.men-quote p {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .men-grid { grid-template-columns: 1fr; gap: 48px; }
 }
 
 /* ============================================================
@@ -1303,6 +1388,33 @@ nav.scrolled {
   letter-spacing: 0.04em;
 }
 
+/* COMUNIDAD */
+.community-section { padding: 120px 0; background: var(--ink); color: var(--white); }
+.community-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+.community-content .eyebrow { color: var(--sage-light); }
+.community-content h2 { font-size: clamp(2rem, 3.5vw, 3rem); color: var(--white); margin: 12px 0 20px; }
+.community-content h2 em { color: var(--sage-light); }
+.community-content p { font-size: 0.92rem; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 12px; }
+.community-list { list-style: none; margin: 16px 0 24px; display: flex; flex-direction: column; gap: 10px; }
+.community-list li { font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+.community-frequency { font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.75; margin-bottom: 28px !important; }
+.community-card-inner {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 48px 40px;
+  text-align: center;
+}
+.community-card-icon { font-size: 2rem; margin-bottom: 20px; }
+.community-card-title { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); margin-bottom: 8px; }
+.community-card-subtitle { font-size: 0.92rem; color: rgba(255,255,255,0.5); margin-bottom: 24px; }
+.community-divider { width: 40px; height: 1px; background: var(--sage); margin: 0 auto 24px; }
+.community-card-body { font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.8; margin-bottom: 16px; }
+.community-card-question { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; color: var(--sage-light); }
+
+@media (max-width: 1024px) {
+  .community-grid { grid-template-columns: 1fr; }
+}
+
 /* ============================================================
    CTA FINAL
 ============================================================ */
@@ -1799,6 +1911,101 @@ footer {
   cursor: pointer;
   color: var(--ink);
 }
+
+/* CARRUSEL ANTES Y DESPUÉS */
+.transform-section { padding: 120px 0; background: var(--cream-dark); }
+.transform-header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+.transform-header h2 { font-size: clamp(2rem, 3.5vw, 3rem); }
+.transform-header h2 em { color: var(--terra); }
+.transform-desc { font-size: 0.92rem; color: var(--ink-light); line-height: 1.8; margin-top: 12px; }
+
+.carousel-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 calc(33.333% - 11px);
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide:hover img { transform: scale(1.02); }
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--white);
+  border: none;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+}
+
+.carousel-btn:hover { background: var(--sage-dark); color: var(--white); }
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+
+.carousel-dots {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 4px 0;
+}
+
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.15);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+  display: block;
+  flex-shrink: 0;
+}
+
+.carousel-dot.active {
+  background: var(--sage-dark);
+  transform: scale(1.4);
+}
+
+.transform-cta { text-align: center; }
+.transform-cta p { font-family: var(--font-display); font-size: 1.4rem; font-style: italic; color: var(--ink); margin-bottom: 20px; }
+
+@media (max-width: 768px) {
+  .carousel-slide { flex: 0 0 calc(100% - 0px); }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carousel-slide { flex: 0 0 calc(50% - 8px); }
+}
+
 </style>
 </head>
 
@@ -1953,9 +2160,7 @@ footer {
   </div>
 </section>
 
-<!-- ============================================================
-     SOBRE MARÍA JOSÉ
-============================================================ -->
+<!-- SOBRE MARÍA JOSÉ -->
 <section class="about-section" id="sobre-mi" aria-labelledby="about-heading">
   <div class="container">
     <div class="about-grid">
@@ -2014,9 +2219,41 @@ footer {
   </div>
 </section>
 
-<!-- ============================================================
-     MÉTODO DOSHAS
-============================================================ -->
+<!-- MÉTODO DOSHAS PARA HOMBRES -->
+<section class="men-section" aria-labelledby="men-heading">
+  <div class="container">
+    <div class="men-grid">
+      <div class="men-content fade-up">
+        <span class="eyebrow">No solo para mujeres</span>
+        <h2 id="men-heading">El Método Doshas<br><em>también es para hombres.</em></h2>
+        <p>No se trata de dietas extremas ni de contar calorías. Se trata de entender cómo funciona tu cuerpo, tu digestión y tu energía para alimentarte de forma estratégica.</p>
+        <p>A través de la medicina ayurveda, Doshas identifica el origen de los desequilibrios digestivos, inflamación, cansancio o malestar intestinal — y los trabaja desde la raíz, sin medicamentos.</p>
+        <p>Un enfoque práctico, adaptable a tu rutina, al entrenamiento, al estrés laboral y a tus objetivos reales de salud.</p>
+        <p class="men-tagline">Comer mejor no es restricción: es conciencia, equilibrio y resultados sostenibles.</p>
+        <a href="https://calendly.com/doshasnutricion/evaluaciondoshas" class="btn-primary" rel="noopener" target="_blank">
+          Agenda tu evaluación gratuita
+        </a>
+      </div>
+      <div class="men-visual fade-up">
+        <div class="men-tags">
+          <div class="men-tag">🏋️ Rendimiento físico</div>
+          <div class="men-tag">⚡ Energía sostenida</div>
+          <div class="men-tag">🧠 Claridad mental</div>
+          <div class="men-tag">🔥 Inflamación crónica</div>
+          <div class="men-tag">😴 Fatiga y recuperación</div>
+          <div class="men-tag">🦠 Microbiota intestinal</div>
+          <div class="men-tag">💼 Estrés laboral</div>
+          <div class="men-tag">🌿 Sin medicamentos</div>
+        </div>
+        <div class="men-quote">
+          <p>"Entender cómo funciona tu cuerpo es la ventaja competitiva que nadie te enseñó."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO DOSHAS -->
 <section class="method-section" id="metodo" aria-labelledby="method-heading">
   <div class="container">
     <div class="method-header fade-up">
@@ -2206,6 +2443,60 @@ footer {
   </div>
 </section>
 
+<section class="transform-section" aria-labelledby="transform-heading">
+  <div class="container">
+    <div class="transform-header fade-up">
+      <span class="eyebrow">Transformaciones reales</span>
+      <h2 id="transform-heading">Antes y después que van<br><em>más allá de lo físico</em> ✨</h2>
+      <p class="transform-desc">Cada paciente llega con una historia: cansancio, inflamación, problemas digestivos, ansiedad con la comida o sintiéndose desconectada de su propio cuerpo.</p>
+      <p class="transform-desc">Después de pasar por Doshas, no solo cambian las fotos. Cambia cómo se sienten: más energía, menos inflamación, una relación más tranquila con la comida y la sensación de volver a habitar su cuerpo con bienestar.</p>
+      <p class="transform-desc" style="font-style:italic;color:var(--ink);">El verdadero cambio no es solo lo que se ve, sino cómo viven su día a día ahora.</p>
+    </div>
+
+    <!-- CARRUSEL -->
+    <div class="carousel-wrap fade-up">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <img src="img/antes-despues-1.webp" alt="Transformación paciente 1 — Doshas Nutrición" loading="lazy" width="480" height="600">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/antes-despues-2.webp" alt="Transformación paciente 2 — Doshas Nutrición" loading="lazy" width="480" height="600">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/antes-despues-3.webp" alt="Transformación paciente 3 — Doshas Nutrición" loading="lazy" width="480" height="600">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/antes-despues-4.webp" alt="Transformación paciente 4 — Doshas Nutrición" loading="lazy" width="480" height="600">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/antes-despues-5.webp" alt="Transformación paciente 5 — Doshas Nutrición" loading="lazy" width="480" height="600">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/antes-despues-6.webp" alt="Transformación paciente 6 — Doshas Nutrición" loading="lazy" width="480" height="600">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/antes-despues-7.webp" alt="Transformación paciente 7 — Doshas Nutrición" loading="lazy" width="480" height="600">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/antes-despues-8.webp" alt="Transformación paciente 8 — Doshas Nutrición" loading="lazy" width="480" height="600">
+        </div>
+      </div>
+
+      <button class="carousel-btn prev" id="carouselPrev" aria-label="Anterior">‹</button>
+      <button class="carousel-btn next" id="carouselNext" aria-label="Siguiente">›</button>
+
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+    <div class="transform-cta fade-up">
+      <p>¿Querés tu transformación?</p>
+      <a href="https://www.instagram.com/mariajoseguerravaldes/" class="btn-primary" rel="noopener" target="_blank">
+        Comentá DOSHAS y empezamos 💬
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============================================================
      PROCESO DE ATENCIÓN
 ============================================================ -->
@@ -2241,9 +2532,7 @@ footer {
   </div>
 </section>
 
-<!-- ============================================================
-     FAQ — Schema FAQPage
-============================================================ -->
+<!--  FAQ — Schema FAQPage -->
 <section class="faq-section" aria-labelledby="faq-heading">
   <div class="container">
     <div class="faq-grid">
@@ -2259,17 +2548,15 @@ footer {
           Hablar con María José
         </a>
       </div>
-
       <div class="faq-items fade-up" role="list">
+
         <div class="faq-item" role="listitem">
           <button class="faq-question" aria-expanded="false">
             ¿Qué es exactamente el Método Doshas?
             <span class="faq-toggle" aria-hidden="true">+</span>
-          </div>
+          </button>
           <div class="faq-answer">
-            <p class="faq-answer-inner">
-              El Método Doshas es un protocolo de Reprogramación Digestiva que combina nutrición funcional, microbiota, medicina ayurvédica y psiconutrición. No se basa en dietas restrictivas ni en suplementos genéricos. Cada protocolo es individualizado según tu constitución (Dosha), tu historial digestivo y tus síntomas específicos.
-            </p>
+            <p class="faq-answer-inner">El Método Doshas es un protocolo de Reprogramación Digestiva que combina nutrición funcional, microbiota, medicina ayurvédica y psiconutrición. No se basa en dietas restrictivas ni en suplementos genéricos. Cada protocolo es individualizado según tu constitución (Dosha), tu historial digestivo y tus síntomas específicos.</p>
           </div>
         </div>
 
@@ -2277,23 +2564,19 @@ footer {
           <button class="faq-question" aria-expanded="false">
             ¿Puedo seguir el programa si vivo fuera de Barcelona?
             <span class="faq-toggle" aria-hidden="true">+</span>
-          </div>
+          </button>
           <div class="faq-answer">
-            <p class="faq-answer-inner">
-              Sí. El 100% del programa se realiza online mediante videollamada. Trabajo con pacientes de España, Latinoamérica y Europa. Lo único que necesitas es conexión a internet y disposición para aplicar el protocolo.
-            </p>
+            <p class="faq-answer-inner">Sí. El 100% del programa se realiza online mediante videollamada. Trabajo con pacientes de España, Latinoamérica y Europa. Lo único que necesitas es conexión a internet y disposición para aplicar el protocolo.</p>
           </div>
         </div>
 
         <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false">
+          <button class="faq-question" aria-expanded="false">
             ¿El Método Doshas puede ayudarme si tengo SIBO confirmado?
             <span class="faq-toggle" aria-hidden="true">+</span>
-          </div>
+          </button>
           <div class="faq-answer">
-            <p class="faq-answer-inner">
-              Sí, el SIBO es una de mis principales especialidades. El protocolo incluye estrategias nutricionales específicas para reducir la sobrepoblación bacteriana, restaurar la motilidad intestinal y repoblar con microbiota beneficiosa. Muchos pacientes con SIBO han resuelto su cuadro completamente en 10-14 semanas.
-            </p>
+            <p class="faq-answer-inner">Sí, el SIBO es una de mis principales especialidades. El protocolo incluye estrategias nutricionales específicas para reducir la sobrepoblación bacteriana, restaurar la motilidad intestinal y repoblar con microbiota beneficiosa. Muchos pacientes con SIBO han resuelto su cuadro completamente en 10-14 semanas.</p>
           </div>
         </div>
 
@@ -2301,11 +2584,9 @@ footer {
           <button class="faq-question" aria-expanded="false">
             ¿Cuánto tiempo tarda en verse resultados?
             <span class="faq-toggle" aria-hidden="true">+</span>
-          </div>
+          </button>
           <div class="faq-answer">
-            <p class="faq-answer-inner">
-              La mayoría de pacientes notan mejoras significativas en las primeras 3-4 semanas: menos hinchazón, más energía, mejor tránsito. Los resultados profundos (curación de microbiota, eliminación de SIBO, remisión de reflujo) se consolidan entre la semana 8 y 12.
-            </p>
+            <p class="faq-answer-inner">La mayoría de pacientes notan mejoras significativas en las primeras 3-4 semanas: menos hinchazón, más energía, mejor tránsito. Los resultados profundos (curación de microbiota, eliminación de SIBO, remisión de reflujo) se consolidan entre la semana 8 y 12.</p>
           </div>
         </div>
 
@@ -2313,11 +2594,9 @@ footer {
           <button class="faq-question" aria-expanded="false">
             ¿Necesito dejar mi medicación para seguir el programa?
             <span class="faq-toggle" aria-hidden="true">+</span>
-          </div>
+          </button>
           <div class="faq-answer">
-            <p class="faq-answer-inner">
-              No. Nunca recomiendo abandonar medicación prescrita sin supervisión médica. El objetivo del Método Doshas es que tu cuerpo sane lo suficiente como para que, con el seguimiento de tu médico, puedas reducirla o eliminarla progresivamente. Trabajamos en paralelo al sistema médico, no en oposición.
-            </p>
+            <p class="faq-answer-inner">No. Nunca recomiendo abandonar medicación prescrita sin supervisión médica. El objetivo del Método Doshas es que tu cuerpo sane lo suficiente como para que, con el seguimiento de tu médico, puedas reducirla o eliminarla progresivamente. Trabajamos en paralelo al sistema médico, no en oposición.</p>
           </div>
         </div>
 
@@ -2325,13 +2604,12 @@ footer {
           <button class="faq-question" aria-expanded="false">
             ¿La evaluación inicial es realmente gratuita?
             <span class="faq-toggle" aria-hidden="true">+</span>
-          </div>
+          </button>
           <div class="faq-answer">
-            <p class="faq-answer-inner">
-              Sí, completamente. La evaluación de 45 minutos no tiene ningún coste. La utilizamos para escuchar tu caso, entender si el Método Doshas puede ayudarte y explicarte cómo funciona el proceso. Si no vemos que sea la solución adecuada para ti, te lo decimos con total honestidad.
-            </p>
+            <p class="faq-answer-inner">Sí, completamente. La evaluación de 45 minutos no tiene ningún coste. La utilizamos para escuchar tu caso, entender si el Método Doshas puede ayudarte y explicarte cómo funciona el proceso. Si no vemos que sea la solución adecuada para ti, te lo decimos con total honestidad.</p>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -2397,9 +2675,46 @@ footer {
   </div>
 </section>
 
-<!-- ============================================================
-     CTA FINAL
-============================================================ -->
+<!-- COMUNIDAD ENERO DOSHAS -->
+<section class="community-section" aria-labelledby="community-heading">
+  <div class="container">
+    <div class="community-grid">
+      <div class="community-content fade-up">
+        <span class="eyebrow">Comunidad activa</span>
+        <h2 id="community-heading">Enero Doshas:<br><em>un reencuentro<br>con tu cuerpo</em></h2>
+        <p>Enero no es para castigarte. Es para volver a tu cuerpo con cariño.</p>
+        <p>Durante el mes trabajamos juntas en:</p>
+        <ul class="community-list">
+          <li>🌿 Desinflamar el cuerpo sin dietas</li>
+          <li>🌿 Recuperar energía real</li>
+          <li>🌿 Mejorar la digestión desde la raíz</li>
+          <li>🌿 Dejar la culpa y la autoexigencia</li>
+          <li>🌿 Volver a confiar en tu cuerpo</li>
+        </ul>
+        <p class="community-frequency">Cada lunes, miércoles y viernes: mini rituales, hábitos Doshas, reflexiones y herramientas simples — sin remedios, sin restricciones, sin obsesión.</p>
+        <a href="https://www.instagram.com/mariajoseguerravaldes/" class="btn-primary" rel="noopener" target="_blank">
+          Unirme a la comunidad →
+        </a>
+      </div>
+
+      <div class="community-card fade-up">
+        <div class="community-card-inner">
+          <div class="community-card-icon">✨</div>
+          <p class="community-card-title">Este no es un reto.</p>
+          <p class="community-card-subtitle">Es un reencuentro contigo 🤍</p>
+          <div class="community-divider"></div>
+          <p class="community-card-body">Si estás aquí es porque tu cuerpo ya te está pidiendo algo distinto. Y yo quiero acompañarte en este camino.</p>
+          <p class="community-card-question">¿Te quedas conmigo? ✨</p>
+          <a href="https://www.instagram.com/mariajoseguerravaldes/" class="btn-white" rel="noopener" target="_blank" style="margin-top:24px;">
+            Ver en Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
 <section class="cta-section" id="calendly" aria-labelledby="cta-heading">
   <div class="container">
     <span class="eyebrow">Primer paso — sin coste</span>
@@ -2569,7 +2884,57 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
 
+// CARRUSEL
+(function() {
+  const track = document.getElementById('carouselTrack');
+  const dotsWrap = document.getElementById('carouselDots');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.carousel-slide');
+  let current = 0;
+
+  function slidesVisible() {
+    return window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, slides.length - slidesVisible());
+  }
+
+  // Crear dots
+  slides.forEach((_, i) => {
+    if (i > maxIndex()) return;
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Ir a imagen ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, maxIndex()));
+    const slideWidth = slides[0].offsetWidth + 16;
+    track.style.transform = `translateX(-${current * slideWidth}px)`;
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  document.getElementById('carouselPrev').addEventListener('click', () => goTo(current - 1));
+  document.getElementById('carouselNext').addEventListener('click', () => goTo(current + 1));
+
+  // Swipe touch
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+  }, { passive: true });
+
+  window.addEventListener('resize', () => goTo(0), { passive: true });
+})();
+
+</script>
 </body>
 </html>
