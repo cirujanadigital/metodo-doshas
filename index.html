@@ -115,7 +115,7 @@
   --terra-light: #E8B99A;
   --ink: #1C1C1C;
   --ink-mid: #3D3A35;
-  --ink-light: #7A746C;
+  --ink-light: #5C5650;
   --white: #FFFFFF;
   --gold: #C9A96E;
   --blush: #E8D5C8;
@@ -1769,7 +1769,7 @@ footer {
 
 .footer-col ul a {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.72);
   transition: color 0.2s;
 }
 
@@ -1787,7 +1787,7 @@ footer {
 
 .footer-bottom p {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.55);
 }
 
 .legal-notice {
@@ -2764,9 +2764,11 @@ footer {
           Barcelona, España · Consultas online disponibles.
         </p>
         <div style="margin-top:20px;display:flex;gap:12px;">
-          <a href="https://www.instagram.com/mariajoseguerravaldes/" aria-label="Instagram de María José Guerra" style="color:rgba(255,255,255,0.35);font-size:0.78rem;letter-spacing:0.06em;">Instagram · +98k seguidores</a>
+          <a href="https://www.instagram.com/mariajoseguerravaldes/" aria-label="Instagram de María José Guerra" style="color:rgba(255,255,255,0.65);font-size:0.78rem;letter-spacing:0.06em;"
+>Instagram · +98k seguidores</a>
           <span style="color:rgba(255,255,255,0.1);">·</span>
-          <a href="https://calendly.com/doshasnutricion/evaluaciondoshas" style="color:rgba(255,255,255,0.35);font-size:0.78rem;letter-spacing:0.06em;" rel="noopener">Calendly</a>
+          <a href="https://calendly.com/doshasnutricion/evaluaciondoshas" style="color:rgba(255,255,255,0.65);font-size:0.78rem;letter-spacing:0.06em;"
+>Calendly</a>
         </div>
       </div>
 
@@ -2807,14 +2809,15 @@ footer {
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 Método Doshas · María José Guerra Valdés · Barcelona, España</p>
-      <p><a href="/politica-de-privacidad" style="color:rgba(255,255,255,0.25);">Política de privacidad</a> · <a href="/aviso-legal" style="color:rgba(255,255,255,0.25);">Aviso legal</a> · <a href="/cookies" style="color:rgba(255,255,255,0.25);">Cookies</a></p>
+      <p>© 2026 Método Doshas · María José Guerra Valdés · Barcelona, España</p> <p>Diseño y desarrollo: <a href="https://cirujanadigital.com" style="color:rgba(255,255,255,0.55);text-decoration:none;" rel="noopener" target="_blank">CIRUJANA DIGITAL</a></p>
+      <p><a href="/politica-de-privacidad" style="color:rgba(255,255,255,0.55);">Política de privacidad</a> · <a href="/aviso-legal" style="color:rgba(255,255,255,0.55);">Aviso legal</a> · <a href="/cookies" style="color:rgba(255,255,255,0.55);">Cookies</a></p>
     </div>
 
     <div class="legal-notice" role="note">
-      <strong>Aviso legal:</strong> Los datos del profesional, estadísticas, testimonios y casos clínicos incluidos en esta web son ficticios y han sido generados con fines demostrativos comerciales por Cirujana Digital.
-      Esta web es un modelo demostrativo. Ningún contenido constituye asesoramiento médico real.
-    </div>
+  <strong>Aviso legal:</strong> Los datos del profesional, estadísticas, testimonios y casos clínicos incluidos en esta web son ficticios y han sido generados con fines demostrativos comerciales.
+  Esta web es un modelo demostrativo desarrollado por <strong>Yulia Monti</strong> para <a href="https://cirujanadigital.com" style="color:rgba(255,255,255,0.4);text-decoration:underline;" rel="noopener" target="_blank">CIRUJANA DIGITAL</a> · cirujanadigital.com.
+  El contenido fue construido con datos públicos recolectados de la web. Ningún elemento constituye asesoramiento médico real.
+</div>
   </div>
 </footer>
 
@@ -2914,7 +2917,7 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
   function goTo(index) {
     current = Math.max(0, Math.min(index, maxIndex()));
-    const slideWidth = slides[0].offsetWidth + 16;
+    const slideWidth = slides[0].getBoundingClientRect().width + 16;
     track.style.transform = `translateX(-${current * slideWidth}px)`;
     dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
       d.classList.toggle('active', i === current);
