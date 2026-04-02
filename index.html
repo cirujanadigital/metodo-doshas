@@ -874,6 +874,122 @@ footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
   .hero-stats { flex-wrap: wrap; gap: 18px; }
   .program-card { padding: 24px 18px; }
 }
+/* ============================================================
+   MODAL SELECTOR DE PAÍS
+============================================================ */
+.country-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(42,42,42,0.7);
+  backdrop-filter: blur(6px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.country-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.country-modal {
+  background: var(--bg);
+  padding: 48px 40px;
+  max-width: 420px;
+  width: 90%;
+  border-radius: 6px;
+  text-align: center;
+  transform: translateY(16px);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.country-modal-overlay.open .country-modal {
+  transform: translateY(0);
+}
+.country-modal-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--ink-light);
+  line-height: 1;
+}
+.country-modal-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange-dark);
+  margin-bottom: 10px;
+  display: block;
+}
+.country-modal h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.country-modal p {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+.country-modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.btn-country {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(200,120,40,0.25);
+  background: var(--cream);
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+  color: var(--ink);
+}
+.btn-country:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+.btn-country-flag {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.btn-country-text {
+  flex: 1;
+  text-align: left;
+  padding: 0 14px;
+}
+.btn-country-text strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.btn-country-text span {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+.btn-country-arrow {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+.country-modal-note {
+  margin-top: 18px;
+  font-size: 0.68rem;
+  color: var(--ink-light);
+  font-style: italic;
+}
 </style>
 </head>
 
@@ -934,9 +1050,10 @@ footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
     </p>
 
     <div class="hero-actions">
-      <a href="https://calendly.com/doshasnutricion/evaluaciondoshas" class="btn-primary" rel="noopener" target="_blank">
-        Solicita tu evaluación
+      <a href="#" onclick="openCountryModal(event)"       class="btn-primary">
+      Solicita tu evaluación
       </a>
+
       <a href="#metodo" class="btn-ghost">Ver el método</a>
     </div>
 
@@ -1080,9 +1197,9 @@ footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
           <span class="tag" role="listitem">Hipotiroidismo</span>
           <span class="tag" role="listitem">Acné · Piel</span>
         </div>
-        <a href="https://calendly.com/doshasnutricion/evaluaciondoshas" class="btn-primary" rel="noopener" target="_blank">
-          Solicitar evaluación — 45 min
-        </a>
+       <a href="#" onclick="openCountryModal(event)" class="btn-primary" >
+  Solicitar evaluación — 45 min
+</a>
       </div>
     </div>
   </div>
@@ -1163,9 +1280,9 @@ footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
           <div style="background:rgba(255,168,80,0.1);border:1px solid rgba(255,168,80,0.25);padding:18px;border-radius:3px;margin-bottom:24px;font-size:0.87rem;color:rgba(255,255,255,0.8);line-height:1.8;text-align:left;">
             María José evalúa cada caso personalmente para asegurarse de que el Método Doshas sea la solución adecuada para ti. La sesión tiene un valor de <strong style="color:var(--orange);">$20 €</strong> — un filtro que garantiza que ambas aprovechemos el tiempo al máximo. Si no puede ayudarte, te lo dice con total honestidad.
           </div>
-          <a href="https://calendly.com/doshasnutricion/evaluaciondoshas" class="btn-white" rel="noopener" target="_blank">
-            Reservar evaluación — $20 €
-          </a>
+          <a href="#" onclick="openCountryModal(event)" class="btn-white">
+  Reservar evaluación — 20 €
+</a>
           <p style="margin-top:14px;font-size:0.72rem;color:rgba(255,255,255,0.35);">
             45 minutos · Online · Pago seguro vía Stripe
           </p>
@@ -1401,8 +1518,8 @@ footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
 <p>
   Reserva tu evaluación de 45 minutos con María José. Analizamos tu caso, entendemos qué está pasando en tu digestión y evaluamos si el programa es para ti. Valor: $20 €.
 </p>
-<a href="https://calendly.com/doshasnutricion/evaluaciondoshas" class="btn-cta-white" rel="noopener" target="_blank">
-  Reservar evaluación — $20 € →
+<a href="#" onclick="openCountryModal(event)" class="btn-cta-white">
+  Reservar evaluación — 20 € →
 </a>
 <p class="cta-urgency">
   ⏰ Solo 5 plazas disponibles este mes · Pago seguro vía Stripe
@@ -1532,6 +1649,59 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+<!-- MODAL SELECTOR DE PAÍS -->
+<div class="country-modal-overlay" id="countryModal" role="dialog" aria-modal="true" aria-label="Seleccionar país">
+  <div class="country-modal">
+    <button class="country-modal-close" onclick="closeCountryModal()" aria-label="Cerrar">✕</button>
+    <span class="country-modal-eyebrow">Evaluación Reprogramación Digestiva</span>
+    <h3>¿Desde dónde reservas?</h3>
+    <p>Seleccioná tu país para continuar con el pago seguro de 20 €</p>
+    <div class="country-modal-buttons">
+      <a href="https://buy.stripe.com/cNi7sN1OO5f6dpIgGZcwg0v"
+         class="btn-country"
+         target="_blank" rel="noopener"
+         onclick="closeCountryModal()">
+        <span class="btn-country-flag">🇪🇸</span>
+        <span class="btn-country-text">
+          <strong>España y resto del mundo</strong>
+          <span>Pago en euros · Stripe seguro</span>
+        </span>
+        <span class="btn-country-arrow">→</span>
+      </a>
+      <a href="https://buy.stripe.com/9B6fZjdxw8rifxQeyRcwg0w"
+         class="btn-country"
+         target="_blank" rel="noopener"
+         onclick="closeCountryModal()">
+        <span class="btn-country-flag">🇨🇱</span>
+        <span class="btn-country-text">
+          <strong>Chile</strong>
+          <span>Pago en pesos chilenos · Stripe seguro</span>
+        </span>
+        <span class="btn-country-arrow">→</span>
+      </a>
+    </div>
+    <p class="country-modal-note">🔒 Pago 100% seguro · Tras el pago recibirás el link para agendar tu cita</p>
+  </div>
+</div>
+
+<script>
+function openCountryModal(e) {
+  e.preventDefault();
+  document.getElementById('countryModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCountryModal() {
+  document.getElementById('countryModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('countryModal').addEventListener('click', function(e) {
+  if (e.target === this) closeCountryModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeCountryModal();
+});
 </script>
 
 </body>
