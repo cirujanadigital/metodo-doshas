@@ -874,9 +874,12 @@ footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
 @media (max-width: 1024px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding: 120px 32px 60px; }
-  .hero-right { height: 60vw; min-height: 320px; }
+  /* Imagen hero mobile: altura generosa + ancla al top para no cortar la cara */
+  .hero-right { height: 70vw; min-height: 360px; }
+  .hero-right img { object-position: center top; }
   .about-grid { grid-template-columns: 1fr; }
-  .about-image-wrap { max-width: 380px; }
+  /* Imagen about: centrada, no desplazada a la derecha */
+  .about-image-wrap { max-width: 380px; margin: 0 auto; }
   .about-credential-card { position: static; margin-top: 16px; }
   .method-steps { grid-template-columns: 1fr; }
   .program-card { grid-template-columns: 1fr; padding: 36px; }
