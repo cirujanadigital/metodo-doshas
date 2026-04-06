@@ -5,11 +5,11 @@
    [4c] CSS externalizado y purgado de variables/reglas sin uso
 ============================================================ */
 :root {
-  --teal-mid:   #74b4bd;
+  --teal-mid:   #4a8f9a;
   --gray-brand: #6b8184;
   --orange:     #ffa850;
   --cream:      #ffebcd;
-  --navy:       #424fbc;
+  --navy:       #2d3899;
   --white:      #ffffff;
   --ink:        #2a2a2a;
   --ink-mid:    #4a4a4a;
