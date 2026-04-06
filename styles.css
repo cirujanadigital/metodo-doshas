@@ -7,7 +7,7 @@
 :root {
   --teal-mid:   #4a8f9a;
   --gray-brand: #6b8184;
-  --orange:     #ffa850;
+  --orange:     #b85e00;
   --cream:      #ffebcd;
   --navy:       #2d3899;
   --white:      #ffffff;
@@ -15,8 +15,8 @@
   --ink-mid:    #4a4a4a;
   --ink-light:  #5a6e72;
   --cream-dark: #f5e6cc;
-  --teal-dark:  #3a7a8a;
-  --orange-dark:#c06820;
+  --teal-dark:  #1f5560;
+  --orange-dark:#8a4510;
   --bg:         #fffdf9;
   --font-display: 'Merriweather', Georgia, serif;
   --font-body:    'Lato', system-ui, sans-serif;
@@ -175,7 +175,7 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--white);
+  background: var(--cream);
   border: 1.5px solid var(--orange);
   padding: 7px 16px;
   border-radius: 40px;
@@ -185,7 +185,7 @@ nav {
 .hero-badge-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--orange);
+  background: var(--navy);
   animation: pulse 2s infinite;
   flex-shrink: 0;
 }
@@ -769,14 +769,14 @@ nav {
 footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; margin-bottom: 52px; }
 .footer-brand-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--orange); }
-.footer-brand-logo span { display: block; font-size: 0.52rem; font-family: var(--font-body); font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal-mid); margin-top: 3px; }
-.footer-brand p { margin-top: 14px; font-size: 0.83rem; color: rgba(255,255,255,0.45); line-height: 1.75; max-width: 260px; }
-.footer-col-title { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 18px; }
+.footer-brand-logo span { display: block; font-size: 0.52rem; font-family: var(--font-body); font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8ecdd6; margin-top: 3px; }
+.footer-brand p { margin-top: 14px; font-size: 0.83rem; color: rgba(255,255,255,0.72); line-height: 1.75; max-width: 260px; }
+.footer-col-title { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.80); margin-bottom: 18px; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-col ul a { font-size: 0.85rem; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+.footer-col ul a { font-size: 0.85rem; color: rgba(255,255,255,0.75); transition: color 0.2s; }
 .footer-col ul a:hover { color: var(--orange); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
-.footer-bottom p { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+.footer-bottom p { font-size: 0.72rem; color: rgba(255,255,255,0.75); }
 .legal-notice { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); padding: 14px 22px; margin-top: 22px; font-size: 0.7rem; color: rgba(255,255,255,0.4); line-height: 1.7; font-style: italic; border-radius: 3px; }
 
 /* ============================================================
@@ -875,11 +875,13 @@ footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding: 120px 32px 60px; }
   /* Imagen hero mobile: altura generosa + ancla al top para no cortar la cara */
-  .hero-right { height: 70vw; min-height: 360px; }
+  .hero-right { height: 70vw; min-height: 320px;
+    max-height: 500px;  }
   .hero-right img { object-position: center top; }
   .about-grid { grid-template-columns: 1fr; }
   /* Imagen about: centrada, no desplazada a la derecha */
-  .about-image-wrap { max-width: 380px; margin: 0 auto; }
+  .about-image-wrap { max-width: 380px; margin: 0 auto;}
+  .about-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3 / 4;}
   .about-credential-card { position: static; margin-top: 16px; }
   .method-steps { grid-template-columns: 1fr; }
   .program-card { grid-template-columns: 1fr; padding: 36px; }
@@ -912,4 +914,146 @@ footer { background: var(--ink); color: var(--white); padding: 64px 0 28px; }
     text-align: center;
     width: fit-content;
   }
+}
+/* ============================================================
+   UTILITY CLASSES — refactorización de inline styles
+============================================================ */
+
+/* Display & layout */
+.d-block       { display: block; }
+.d-flex        { display: flex; }
+.flex-row      { display: flex; flex-direction: row; }
+.flex-wrap     { flex-wrap: wrap; }
+.align-center  { align-items: center; }
+.gap-12        { gap: 12px; }
+.text-center   { text-align: center; }
+
+/* Spacing */
+.mt-10  { margin-top: 10px; }
+.mt-22  { margin-top: 22px; }
+.mt-24  { margin-top: 24px; }
+.mt-28  { margin-top: 28px; }
+
+/* Color tokens */
+.color-ink-mid { color: var(--ink-mid); }
+.color-orange  { color: var(--orange); }
+
+/* Images */
+.img-cover       { width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-ratio-3-4   { aspect-ratio: 3 / 4; }
+
+/* ============================================================
+   PAIN SECTION — intro paragraph
+============================================================ */
+.pain-intro-desc {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.92rem;
+  margin-top: 14px;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   PROGRAM ACCESS BOX — elementos internos
+============================================================ */
+.program-access-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.program-access-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--white);
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.program-access-note {
+  background: rgba(255, 168, 80, 0.1);
+  border: 1px solid rgba(255, 168, 80, 0.25);
+  padding: 18px;
+  border-radius: 3px;
+  margin-bottom: 24px;
+  font-size: 0.87rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  text-align: left;
+}
+
+.program-access-legal {
+  margin-top: 14px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ============================================================
+   BTN-GHOST VARIANTS
+============================================================ */
+.btn-ghost--teal  { color: var(--teal-dark); }
+.btn-ghost--white { color: rgba(255, 255, 255, 0.7); }
+.btn-ghost--sm    { font-size: 0.82rem; }
+.btn-ghost--bold  { font-weight: 700; display: inline-flex; }
+
+/* ============================================================
+   BLOG LINK — touch target mínimo 44px
+============================================================ */
+.blog-link--touch {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================================
+   CTA SECTION — textos de soporte
+============================================================ */
+.cta-legal {
+  margin-top: 18px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* ============================================================
+   FOOTER — social links & créditos
+============================================================ */
+.footer-social {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-social-link {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.78rem;
+}
+
+.footer-social-sep {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-credit-link {
+  color: var(--orange);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.footer-credit-sub {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.67rem;
+  display: block;
+  margin-top: 2px;
+}
+
+.footer-legal-link {
+  color: rgba(255, 255, 255, 0.55);
+}
+@font-face {
+  font-family: 'Merriweather-fallback';
+  src: local('Georgia');
+  size-adjust: 94%;
+  ascent-override: 90%;
+  descent-override: normal;
 }
