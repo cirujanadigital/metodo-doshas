@@ -57,11 +57,17 @@ if ('requestIdleCallback' in window) {
   setTimeout(initFadeUp, 200);
 }
 
+
+const painBtn = document.getElementById('painExpandBtn');
+
+if (painBtn) {
+  painBtn.addEventListener('click', expandPain);
+}
 // ─────────────────────────────────────────────
 // PATOLOGÍAS EXPANDIBLES (sin re-query)
 // ─────────────────────────────────────────────
 function expandPain() {
-  const btn = document.getElementById('painExpandBtn');
+  const btn = painBtn;
   const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
   if (!isExpanded) {

@@ -8,33 +8,66 @@
 <meta name="description" content="Especialista en microbiota, SIBO, reflujo e hinchazón abdominal en Barcelona. Sin dietas extremas ni fármacos. Agenda tu Evaluación de Reprogramación Digestiva.">
 <link rel="canonical" href="https://www.doshasnutricion.com/">
 <link rel="alternate" hreflang="es" href="https://www.doshasnutricion.com/">
-<link rel="alternate" hreflang="es-CL" href="https://www.doshasnutricion.com/">
 <link rel="alternate" hreflang="x-default" href="https://www.doshasnutricion.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://i.ytimg.com">
 <link rel="preload" as="image" href="/img/foto-mariajose-2.webp" fetchpriority="high">
-<style></style>
+<!-- YouTube performance -->
+<link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+<link rel="preconnect" href="https://www.youtube.com" crossorigin>
+<link rel="dns-prefetch" href="https://i.ytimg.com">
+<link rel="dns-prefetch" href="https://www.youtube.com">
+<style>
+:root{--orange:#b85e00;--orange-dark:#8a4510;--cream:#ffebcd;--teal-dark:#1f5560;
+--ink:#2a2a2a;--ink-mid:#4a4a4a;--bg:#fffdf9;--white:#ffffff;
+--font-display:'Merriweather-fallback',Georgia,serif;
+--font-body:'Lato',system-ui,sans-serif;}
+.d-block       { display: block; }
+.color-ink-mid { color: var(--ink-mid); }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);
+font-weight:300;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:100;padding:18px 0;
+background:rgba(255,253,249,0.97);backdrop-filter:blur(12px);
+box-shadow:0 1px 0 rgba(0,0,0,.07)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-display);font-size:1.4rem;font-weight:700; letter-spacing: 0.02em; line-height: 1;
+color:var(--orange-dark)}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.hero-left{background:var(--cream);display:flex;flex-direction:column;
+justify-content:center;padding:120px 60px 80px 80px; z-index: 2}
+.hero-right{position:relative;overflow:hidden;background:#4a8f9a}
+.img-cover{width:100%;height:100%;object-fit:cover;display:block}
+@font-face{font-family:'Merriweather-fallback';src:local('Georgia');
+size-adjust:94%;ascent-override:90%;descent-override:normal}
+</style>
 <link rel="preload" href="/styles.css" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/styles.css"></noscript>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </noscript>
-<link rel="icon" type="image/webp" href="/img/favicon.webp">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta property="og:url" content="https://www.doshasnutricion.com/">
 <meta property="og:title" content="Nutricionista Digestiva Barcelona | Método Doshas">
 <meta property="og:description" content="Sana tu digestión desde la raíz. Sin dietas extremas. Sin fármacos.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
-<meta property="og:image" content="https://www.doshasnutricion.com/img/og-mariajose.webp">
+<meta property="og:image" content="https://www.doshasnutricion.com/img/OG.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nutricionista Digestiva Barcelona | Método Doshas">
 <meta name="twitter:description" content="Sana tu digestión desde la raíz. Sin fármacos.">
-<meta name="twitter:image" content="https://www.doshasnutricion.com/img/og-mariajose.webp">
+<meta name="twitter:image" content="https://www.doshasnutricion.com/img/OG.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,7 +76,7 @@
       "@type": ["MedicalBusiness","LocalBusiness","Nutritionist"],
       "@id": "https://www.doshasnutricion.com/#business",
       "name": "Doshas · Nutrición de vida · María José Guerra Valdés",
-      "url": "https://www.doshasnutricion.com",
+      "url": "https://www.doshasnutricion.com/",
       "telephone": "+34664331157",
       "priceRange": "€€€",
       "address": {
@@ -109,8 +142,8 @@
         <li><a href="#metodo">Método</a></li>
         <li><a href="#servicios">Programa</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#calendly" class="nav-cta">Solicitar evaluación</a></li>
+        <!-- <li><a href="#blog">Blog</a></li> -->
+        <li><a href="#" onclick="openCountryModal(event)" class="nav-cta"> Solicitar evaluación </a></li>
       </ul>
       <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
@@ -123,7 +156,7 @@
   <a href="#metodo" class="mobile-link">Método</a>
   <a href="#servicios" class="mobile-link">Programa</a>
   <a href="#sobre-mi" class="mobile-link">Sobre mí</a>
-  <a href="#blog" class="mobile-link">Blog</a>
+  <!-- <a href="#blog" class="mobile-link">Blog</a> -->
   <a href="#calendly" class="mobile-link">Solicitar evaluación</a>
 </div>
 <main>
@@ -147,8 +180,8 @@
       <strong class="d-block mt-10 color-ink-mid">Para personas que lo intentaron todo sin obtener resultados.</strong>
     </p>
     <div class="hero-actions">
-      <a href="#metodo" class="btn-primary">
-        Descubre si el Método Doshas es para ti →
+      <a href="#" onclick="openCountryModal(event)"   class="btn-primary">
+        Reservar evaluación — 20 € →
       </a>
       <a href="#metodo" class="btn-ghost">Ver el método</a>
     </div>
@@ -169,13 +202,18 @@
   </div>
   <div class="hero-right" aria-hidden="true">
     <img
-      src="img/foto-mariajose-2.webp"
-      alt="María José Guerra Valdés — Nutricionista digestiva Barcelona"
-      width="800" height="1000"
-      loading="eager" fetchpriority="high"
-      sizes="(max-width: 768px) 100vw, 50vw"
-      onerror="this.style.display='none'; this.parentElement.classList.add('hero-right--fallback')"
-      class="img-cover">
+  src="/img/foto-mariajose-2.webp"
+  srcset="/img/foto-mariajose-2-400w.webp 400w,
+          /img/foto-mariajose-2.webp 800w"
+  sizes="(max-width: 768px) 100vw, 50vw"
+  alt="María José Guerra Valdés — Nutricionista digestiva Barcelona"
+  width="800"
+  height="1000"
+  loading="eager"
+  fetchpriority="high"
+  onerror="this.parentElement.classList.add('hero-right--fallback')"
+  class="img-cover"
+>
   </div>
 </section>
 <!-- PATOLOGÍAS -->
@@ -241,9 +279,13 @@
       </article>
     </div>
     <div class="text-center mt-28">
-      <button class="pain-expand-btn" id="painExpandBtn" onclick="expandPain()" aria-expanded="false" aria-controls="painGrid">
-        Ver más condiciones <span class="pain-expand-icon">↓</span>
-      </button>
+        <button
+            class="pain-expand-btn"
+            id="painExpandBtn"
+            aria-expanded="false"
+            aria-controls="painGrid">
+            Ver más condiciones <span class="pain-expand-icon">↓</span>
+        </button>
     </div>
   </div>
 </section>
@@ -253,7 +295,7 @@
     <div class="about-grid">
       <div class="about-image-wrap fade-up">
         <img
-          src="img/foto-mariajose-about.webp"
+          src="/img/foto-mariajose-about.webp"
           alt="María José Guerra — Especialista en microbiota y digestión Barcelona"
           width="600" height="800" loading="lazy"
           class="img-cover img-ratio-3-4">
@@ -513,7 +555,7 @@
     </div>
   </div>
 </section>
-<!-- BLOG -->
+<!-- BLOG
 <section class="blog-section" id="blog" aria-labelledby="blog-heading">
   <div class="container">
     <div class="blog-header fade-up">
@@ -524,12 +566,14 @@
       <a href="/blog" class="blog-link blog-link--touch">Ver todos los artículos</a>
     </div>
     <div class="blog-grid" role="list">
-      <article class="blog-card featured fade-up" role="listitem">
-        <div class="blog-card-cat">SIBO · Diagnóstico</div>
-        <h3>Cómo saber si tienes SIBO: los 9 síntomas que casi nadie conecta</h3>
-        <p>El Sobrecrecimiento Bacteriano Intestinal es más común de lo que crees y se confunde constantemente con SII, colon irritable o "digestión lenta".</p>
-        <div class="blog-meta">12 min lectura · Nutricionista digestiva Barcelona</div>
-      </article>
+      <a href="/blog/sintomas-de-sibo" aria-label="Leer artículo: Cómo saber si tienes SIBO">
+  <article class="blog-card featured fade-up" role="listitem">
+    <div class="blog-card-cat">SIBO · Diagnóstico</div>
+    <h3>Cómo saber si tienes SIBO: los 9 síntomas que casi nadie conecta</h3>
+    <p>El Sobrecrecimiento Bacteriano Intestinal es más común de lo que crees y se confunde constantemente con SII, colon irritable o "digestión lenta".</p>
+    <div class="blog-meta">12 min lectura · Nutricionista digestiva Barcelona</div>
+  </article>
+</a>
       <article class="blog-card fade-up" role="listitem">
         <div class="blog-card-cat">Microbiota · Nutrición</div>
         <h3>Cómo sanar tu microbiota naturalmente en 8 semanas</h3>
@@ -569,6 +613,7 @@
     </div>
   </div>
 </section>
+-->
 <!-- COMUNIDAD -->
 <section class="community-section" aria-labelledby="community-heading">
   <div class="container">
@@ -642,11 +687,12 @@
     </div>
     <div class="youtube-facade fade-up" id="ytFacade" onclick="loadYouTube()" role="button" tabindex="0" aria-label="Reproducir vídeo de YouTube" onkeydown="if(event.key==='Enter'||event.key===' ')loadYouTube()">
       <img
-        src="https://i.ytimg.com/vi/YNkB1huKLEw/maxresdefault.jpg"
-        alt="Vídeo sobre salud digestiva — Doshas Nutrición"
-        loading="lazy"
-        onerror="this.src='https://i.ytimg.com/vi/YNkB1huKLEw/hqdefault.jpg'"
-        class="img-cover">
+  src="https://i.ytimg.com/vi/YNkB1huKLEw/maxresdefault.jpg"
+  alt="Vídeo sobre salud digestiva — Doshas Nutrición"
+  loading="lazy"
+  decoding="async"
+  onerror="this.src='https://i.ytimg.com/vi/YNkB1huKLEw/hqdefault.jpg'"
+  class="img-cover">
       <div class="youtube-play-btn" aria-hidden="true">
         <svg viewBox="0 0 68 48" width="68" height="48" xmlns="http://www.w3.org/2000/svg">
           <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#ff0000"/>
@@ -703,7 +749,7 @@
           <ul>
             <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#metodo">Método Doshas</a></li>
-            <li><a href="#blog">Blog digestivo</a></li>
+            <!-- <li><a href="#blog">Blog digestivo</a></li> -->
             <li><a href="https://www.youtube.com/@doshasnutricion59" rel="noopener" target="_blank">YouTube</a></li>
           </ul>
         </div>
@@ -711,11 +757,11 @@
       <div class="footer-col">
         <p class="footer-col-title">Especialidades</p>
         <ul>
-          <li><a>Nutricionista SIBO Barcelona</a></li>
-          <li><a>Especialista microbiota</a></li>
-          <li><a>Inflamación intestinal</a></li>
-          <li><a>Fatiga crónica</a></li>
-          <li><a>Gut health specialist Spain</a></li>
+          <li><span>Nutricionista SIBO Barcelona</span></li>
+          <li><span>Especialista microbiota</span></li>
+          <li><span>Inflamación intestinal</span></li>
+          <li><span>Fatiga crónica</span></li>
+          <li><span>Gut health specialist Spain</span></li>
         </ul>
       </div>
     </div>
@@ -727,8 +773,8 @@
         <span class="footer-credit-sub">Desarrollo Web De Alto Rendimiento · cirujanadigital.com</span>
       </p>
       <p>
-        <a href="politica-de-privacidad.html" class="footer-legal-link">Privacidad</a> ·
-        <a href="aviso-legal.html" class="footer-legal-link">Aviso legal</a> ·
+        <a href="/politica-de-privacidad.html" class="footer-legal-link">Privacidad</a> ·
+        <a href="/aviso-legal.html" class="footer-legal-link">Aviso legal</a> ·
         <a href="cookies.html" class="footer-legal-link">Cookies</a>
       </p>
     </div>
