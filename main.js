@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// GLOBALS (reutilización = menos reflows)
+// GLOBALS
 // ─────────────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
@@ -12,24 +12,21 @@ const ytFacade = document.getElementById('ytFacade');
 // ─────────────────────────────────────────────
 hamburger?.addEventListener('click', () => {
   mobileNav.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.documentElement.classList.add('no-scroll');
   hamburger.setAttribute('aria-expanded', 'true');
 });
-
 mobileClose?.addEventListener('click', closeMobileNav);
-
 document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', closeMobileNav);
 });
-
 function closeMobileNav() {
   mobileNav.classList.remove('open');
-  document.body.style.overflow = '';
+  document.documentElement.classList.remove('no-scroll');
   hamburger?.setAttribute('aria-expanded', 'false');
 }
 
 // ─────────────────────────────────────────────
-// INTERSECTION OBSERVER (optimizado)
+// INTERSECTION OBSERVER
 // ─────────────────────────────────────────────
 const observer = new IntersectionObserver(
   entries => {
@@ -40,87 +37,103 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px',
-  }
+  { threshold: 0.1, rootMargin: '0px 0px -10% 0px' }
 );
 
 function initFadeUp() {
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-up').forEach(el => {
+    el.style.willChange = 'auto';
+    observer.observe(el);
+  });
 }
 
-// Idle load = menos impacto en LCP
 if ('requestIdleCallback' in window) {
   requestIdleCallback(initFadeUp, { timeout: 1000 });
 } else {
   setTimeout(initFadeUp, 200);
 }
 
+// ─────────────────────────────────────────────
+// SCROLLBAR COMPENSATION — después del load completo
+// ─────────────────────────────────────────────
+window.addEventListener('load', () => {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(
+      () => {
+        const sw = window.innerWidth - document.documentElement.clientWidth;
+        document.documentElement.style.setProperty(
+          '--scrollbar-comp',
+          sw + 'px'
+        );
+      },
+      { timeout: 2000 }
+    );
+  } else {
+    setTimeout(() => {
+      const sw = window.innerWidth - document.documentElement.clientWidth;
+      document.documentElement.style.setProperty('--scrollbar-comp', sw + 'px');
+    }, 500);
+  }
+});
 
+// ─────────────────────────────────────────────
+// PATOLOGÍAS EXPANDIBLES
+// ─────────────────────────────────────────────
 const painBtn = document.getElementById('painExpandBtn');
-
 if (painBtn) {
   painBtn.addEventListener('click', expandPain);
 }
-// ─────────────────────────────────────────────
-// PATOLOGÍAS EXPANDIBLES (sin re-query)
-// ─────────────────────────────────────────────
-function expandPain() {
-  const btn = painBtn;
-  const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
+function expandPain() {
+  const isExpanded = painBtn.getAttribute('aria-expanded') === 'true';
   if (!isExpanded) {
     painCards.forEach(card => {
       card.classList.add('revealed');
       card.removeAttribute('aria-hidden');
       observer.observe(card);
     });
-
-    btn.setAttribute('aria-expanded', 'true');
-    btn.querySelector('.pain-expand-icon').textContent = '↑';
-    btn.firstChild.textContent = 'Ver menos ';
+    painBtn.setAttribute('aria-expanded', 'true');
+    painBtn.querySelector('.pain-expand-icon').textContent = '↑';
+    painBtn.firstChild.textContent = 'Ver menos ';
   } else {
     painCards.forEach(card => {
       card.classList.remove('revealed');
       card.setAttribute('aria-hidden', 'true');
     });
-
-    btn.setAttribute('aria-expanded', 'false');
-    btn.querySelector('.pain-expand-icon').textContent = '↓';
-    btn.firstChild.textContent = 'Ver más condiciones ';
+    painBtn.setAttribute('aria-expanded', 'false');
+    painBtn.querySelector('.pain-expand-icon').textContent = '↓';
+    painBtn.firstChild.textContent = 'Ver más condiciones ';
   }
 }
 
 // ─────────────────────────────────────────────
-// MODAL PAÍS (con cleanup real)
+// MODAL PAÍS
 // ─────────────────────────────────────────────
 const ac = new AbortController();
 
 function openCountryModal(e) {
   if (e) e.preventDefault();
-
   const modal = document.getElementById('countryModal');
+  if (!modal) return;
+  document.documentElement.classList.add('no-scroll');
   modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-
   const firstFocusable = modal.querySelector('button, a, [tabindex]');
-  if (firstFocusable) setTimeout(() => firstFocusable.focus(), 100);
+  if (firstFocusable) requestAnimationFrame(() => firstFocusable.focus());
 }
 
 function closeCountryModal() {
-  document.getElementById('countryModal')?.classList.remove('open');
-  document.body.style.overflow = '';
+  const modal = document.getElementById('countryModal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.documentElement.classList.remove('no-scroll');
 }
 
-// Overlay click
 document
   .getElementById('countryModal')
   ?.addEventListener('click', function (e) {
     if (e.target === this) closeCountryModal();
   });
 
-// Escape global (OPTIMIZADO)
 document.addEventListener(
   'keydown',
   e => {
@@ -133,16 +146,14 @@ document.addEventListener(
 );
 
 // ─────────────────────────────────────────────
-// YOUTUBE FACADE (mejorado)
+// YOUTUBE FACADE
 // ─────────────────────────────────────────────
 function loadYouTube() {
   if (!ytFacade) return;
-
   const wrap = document.createElement('div');
   wrap.className = 'youtube-embed-wrap';
   wrap.style.cssText =
     'max-width:800px;margin:0 auto;border-radius:6px;overflow:hidden;box-shadow:0 16px 60px rgba(0,0,0,0.12);position:relative;padding-top:56.25%;';
-
   const iframe = document.createElement('iframe');
   iframe.src = 'https://www.youtube.com/embed/YNkB1huKLEw?autoplay=1';
   iframe.title = 'YouTube video player';
@@ -154,12 +165,10 @@ function loadYouTube() {
   iframe.setAttribute('allowfullscreen', '');
   iframe.style.cssText =
     'position:absolute;top:0;left:0;width:100%;height:100%;border:none;';
-
   wrap.appendChild(iframe);
   ytFacade.parentNode.replaceChild(wrap, ytFacade);
 }
 
-// Accesibilidad teclado
 ytFacade?.addEventListener('keydown', e => {
   if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
