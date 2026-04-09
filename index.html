@@ -2,72 +2,230 @@
 <html lang="es">
 <head>
 <!-- BASICS -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nutricionista Digestiva en Barcelona | Método Doshas | María José Guerra</title>
-<meta name="description" content="Especialista en microbiota, SIBO, reflujo e hinchazón abdominal en Barcelona. Sin dietas extremas ni fármacos. Agenda tu Evaluación de Reprogramación Digestiva.">
-<link rel="canonical" href="https://www.doshasnutricion.com/">
-<link rel="alternate" hreflang="es" href="https://www.doshasnutricion.com/">
-<link rel="alternate" hreflang="x-default" href="https://www.doshasnutricion.com/">
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutricionista Digestiva en Barcelona | Método Doshas | María José Guerra</title>
+  <meta name="description" content="Especialista en microbiota, SIBO, reflujo e hinchazón abdominal en Barcelona. Sin dietas extremas ni fármacos. Agenda tu Evaluación de Reprogramación Digestiva.">
 
-<link rel="preload" as="image" href="img/foto-mariajose-2.webp" fetchpriority="high">
+  <link rel="canonical" href="https://www.doshasnutricion.com/">
+  <link rel="alternate" hreflang="es"        href="https://www.doshasnutricion.com/">
+  <link rel="alternate" hreflang="x-default" href="https://www.doshasnutricion.com/">
 
+<link rel="preload" as="image" href="/img/foto-mariajose-2.webp" fetchpriority="high">
+<!-- <link rel="preload" href="/styles.css" as="style"> -->
 <style>
-:root{--orange:#ffb347;--orange-dark:#8a4510;--cream:#ffebcd;--teal-dark:#1f5560;
---ink:#2a2a2a;--ink-mid:#4a4a4a;--bg:#fffdf9;--white:#ffffff; --font-display: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; --scrollbar-comp: 0px; }
-.d-block       { display: block; }
-.color-ink-mid { color: var(--ink-mid); }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--bg);color:var(--ink);font-family:var(--font-body); font-weight:400;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-body.modal-open {overflow: hidden;padding-right: var(--scrollbar-comp);}
-main {   display: block;   min-height: 100svh; }
-img{max-width:100%;height:auto;display:block;}
-a{color:inherit;text-decoration:none}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:100;padding:18px 0;
-background:rgba(255,253,249,0.97);backdrop-filter:blur(12px);
-box-shadow:0 1px 0 rgba(0,0,0,.07)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:var(--font-display);font-size:1.4rem;font-weight:700; letter-spacing: 0.02em; line-height: 1;
-color:var(--orange-dark)}
-.hero{min-height: 100svh; display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-.hero-left{background:var(--cream);min-height: 520px; display:flex;flex-direction:column; contain: layout style;
-justify-content:center;padding:120px 60px 80px 80px}
-.hero-right{position: relative;   overflow: hidden;   background: #4a8f9a;
-  min-height: 600px;   aspect-ratio: 4 / 5;}
-.hero-right img { width: 100%; height: 100%;object-fit: cover;display: block;}
-.hero-right--fallback { background: linear-gradient(160deg, var(--teal-mid) 0%, var(--teal-dark) 100%); display: flex; align-items: center; justify-content: center; }
-.hero-right--fallback::after { content: ''; display: block; width: 180px; height: 280px; background: rgba(255,255,255,0.08); border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--cream); border: 1.5px solid var(--orange); padding: 7px 16px; border-radius: 40px; margin-bottom: 24px; width: fit-content; }
-.hero-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--navy); animation: pulse 2s infinite; flex-shrink: 0; }
-@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
-.hero-badge span { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: var(--orange-dark); text-transform: uppercase; }
-.hero-seo-label { font-family: var(--font-body); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; color: var(--teal-dark); text-transform: uppercase; margin-bottom: 10px; }
-.hero h1 { font-size: clamp(2.6rem, 4.5vw, 4.8rem); line-height: 1.1; margin-bottom: 12px; color: var(--ink); }
-.hero h1 em { font-style: italic; color: var(--orange-dark); }
-.hero-tagline { font-family: var(--font-display); font-size: clamp(1rem, 1.8vw, 1.25rem); font-style: italic; font-weight: 300; color: var(--teal-dark); margin-bottom: 16px; }
-.hero-desc { font-size: 0.95rem; color: var(--ink-mid); max-width: 440px; line-height: 1.8; margin-bottom: 36px; }
-.hero-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 44px; }
-.img-cover{width:100%;height:100%;object-fit:cover;display:block}
-.country-modal-overlay{ position:fixed; inset:0; display:flex; align-items:center;
-  justify-content:center; opacity:0; visibility:hidden; pointer-events:none; background:rgba(0,0,0,0.6); z-index:9999; }
-.country-modal-overlay.open{ opacity:1;visibility:visible;pointer-events:auto;}
-.country-modal-overlay.open .country-modal {
-  will-change: transform, opacity;
-}
-@media (max-width: 1024px) { .hero-left { min-height: auto; }}
+   :root {
+      --orange:          #ffa850;
+      --orange-dark:     #d97706;
+      --cream:           #ffebcd;
+      --teal-dark:       #1f5560;
+      --ink:             #2a2a2a;
+      --ink-mid:         #4a4a4a;
+      --bg:              #fffdf9;
+      --white:           #ffffff;
+      --font-display:    'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+      --font-body:       system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --scrollbar-comp:  0px;
+    }
 
+    /* ── Reset mínimo ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html  { scroll-behavior: smooth; font-size: 16px; }
+    body  {
+      background:                var(--bg);
+      color:                     var(--ink);
+      font-family:               var(--font-body);
+      font-weight:               400;
+      line-height:               1.7;
+      overflow-x:                hidden;
+      -webkit-font-smoothing:    antialiased;
+    }
+    body.modal-open { overflow: hidden; padding-right: var(--scrollbar-comp); }
+    main  { display: block; min-height: 100svh; }
+    img   { max-width: 100%; height: auto; display: block; }
+    a     { color: inherit; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Utility críticas (usadas en hero) ── */
+    .d-block       { display: block; }
+    .color-ink-mid { color: var(--ink-mid); }
+    .mt-10         { margin-top: 10px; }
+
+    /* ── NAV (sticky = above-the-fold) ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 18px 0;
+      background: rgba(255,253,249,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.07);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family:    var(--font-display);
+      font-size:      1.4rem;
+      font-weight:    700;
+      letter-spacing: 0.02em;
+      line-height:    1;
+      color:          var(--orange-dark);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100svh;
+    }
+    .hero-left {
+      background:      var(--cream);
+      display:         flex;
+      flex-direction:  column;
+      justify-content: center;
+      padding:         80px 60px 80px 80px;
+      overflow-y:      auto;
+    }
+    .hero-right {
+      position: relative;
+      background: #4a8f9a; /* fallback mientras carga */
+    }
+    .hero-right > .img-cover {
+      position:        absolute;
+      inset:           0;
+      width:           100%;
+      height:          100%;
+      object-fit:      cover;
+      object-position: 50% 25%;
+    }
+    /* Fallback si la imagen falla */
+    .hero-right--fallback {
+      background: linear-gradient(160deg, #4a8f9a 0%, var(--teal-dark) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-right--fallback::after {
+      content: '';
+      display: block;
+      width: 180px; height: 280px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    }
+
+    /* Hero — badge animado */
+    .hero-badge {
+      display:       inline-flex;
+      align-items:   center;
+      gap:           8px;
+      background:    var(--cream);
+      border:        1.5px solid var(--orange);
+      padding:       7px 16px;
+      border-radius: 40px;
+      margin-bottom: 24px;
+      width:         fit-content;
+    }
+    .hero-badge-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--orange-dark);
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(1.3); }
+    }
+    .hero-badge span {
+      font-size:      0.7rem;
+      font-weight:    700;
+      letter-spacing: 0.08em;
+      color:          var(--orange-dark);
+      text-transform: uppercase;
+    }
+
+    /* Hero — tipografía */
+    .hero-seo-label {
+      font-family:    var(--font-body);
+      font-size:      0.78rem;
+      font-weight:    700;
+      letter-spacing: 0.08em;
+      color:          var(--teal-dark);
+      text-transform: uppercase;
+      margin-bottom:  10px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size:   clamp(2.6rem, 4.5vw, 4.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+    .hero h1 em  { font-style: italic; color: var(--orange-dark); }
+    .hero-tagline {
+      font-family:  var(--font-display);
+      font-size:    clamp(1rem, 1.8vw, 1.25rem);
+      font-style:   italic;
+      font-weight:  300;
+      color:        var(--teal-dark);
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size:     0.95rem;
+      color:         var(--ink-mid);
+      max-width:     440px;
+      line-height:   1.8;
+      margin-bottom: 30px;
+    }
+    .hero-actions {
+      display:       flex;
+      align-items:   center;
+      gap:           20px;
+      flex-wrap:     wrap;
+      margin-bottom: 44px;
+    }
+
+    /* Modal overlay (oculto por defecto — evita CLS) */
+    .country-modal-overlay {
+      position:       fixed;
+      inset:          0;
+      display:        flex;
+      align-items:    center;
+      justify-content:center;
+      opacity:        0;
+      visibility:     hidden;
+      pointer-events: none;
+      background:     rgba(0,0,0,0.6);
+      z-index:        9999;
+    }
+    .country-modal-overlay.open {
+      opacity:        1;
+      visibility:     visible;
+      pointer-events: auto;
+    }
+    .country-modal-overlay.open .country-modal {
+      will-change: transform, opacity;
+    }
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 100px 32px 60px; }
+      .hero-right {
+        height:       clamp(280px, 50vw, 420px);
+        aspect-ratio: unset;
+      }
+      .hero-right > .img-cover { object-position: 50% 15%; }
+    }
 </style>
-<link rel="preload" href="styles.css" as="style">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
 <meta property="og:url" content="https://www.doshasnutricion.com/">
 <meta property="og:title" content="Nutricionista Digestiva Barcelona | Método Doshas">
 <meta property="og:description" content="Sana tu digestión desde la raíz. Sin dietas extremas. Sin fármacos.">
@@ -80,6 +238,7 @@ justify-content:center;padding:120px 60px 80px 80px}
 <meta name="twitter:title" content="Nutricionista Digestiva Barcelona | Método Doshas">
 <meta name="twitter:description" content="Sana tu digestión desde la raíz. Sin fármacos.">
 <meta name="twitter:image" content="https://www.doshasnutricion.com/img/OG.jpg">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -141,433 +300,527 @@ justify-content:center;padding:120px 60px 80px 80px}
   ]
 }
 </script>
-
 </head>
+
 <body>
-<nav id="mainNav" role="navigation" aria-label="Navegación principal">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo" aria-label="Inicio — Doshas Nutrición de vida">
-        Doshas
-        <span>Nutrición de vida</span>
-      </a>
-      <ul class="nav-links" role="list">
-        <li><a href="#metodo">Método</a></li>
-        <li><a href="#servicios">Programa</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <!-- <li><a href="#blog">Blog</a></li> -->
-        <li><a href="#" onclick="openCountryModal(event)" class="nav-cta"> Solicitar evaluación </a></li>
-      </ul>
-      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
-        <span></span><span></span><span></span>
-      </button>
+ <!-- ═══════════════════════════════════════════
+       NAVEGACIÓN PRINCIPAL
+  ════════════════════════════════════════════ -->
+  <nav id="mainNav" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="/" class="nav-logo" aria-label="Inicio — Doshas Nutrición de vida">
+          Doshas
+          <span>Nutrición de vida</span>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#servicios">Programa</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <!-- <li><a href="#blog">Blog</a></li> -->
+          <li>
+            <a href="#" onclick="openCountryModal(event)" class="nav-cta">
+              Solicitar evaluación
+            </a>
+          </li>
+        </ul>
+
+        <button
+          class="nav-hamburger"
+          id="hamburger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
     </div>
+  </nav>
+
+<!-- MENÚ MOBILE -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Menú">
+    <button class="mobile-nav-close" id="mobileClose" aria-label="Cerrar menú">✕</button>
+    <a href="#metodo"   class="mobile-link">Método</a>
+    <a href="#servicios" class="mobile-link">Programa</a>
+    <a href="#sobre-mi" class="mobile-link">Sobre mí</a>
+    <!-- <a href="#blog" class="mobile-link">Blog</a> -->
+    <a href="#calendly" class="mobile-link">Solicitar evaluación</a>
   </div>
-</nav>
-<div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Menú">
-  <button class="mobile-nav-close" id="mobileClose" aria-label="Cerrar menú">✕</button>
-  <a href="#metodo" class="mobile-link">Método</a>
-  <a href="#servicios" class="mobile-link">Programa</a>
-  <a href="#sobre-mi" class="mobile-link">Sobre mí</a>
-  <!-- <a href="#blog" class="mobile-link">Blog</a> -->
-  <a href="#calendly" class="mobile-link">Solicitar evaluación</a>
-</div>
-<main>
+
+  <main>
 <!-- HERO -->
 <section class="hero" aria-label="Sección principal">
-  <div class="hero-left">
-    <div class="hero-badge">
-      <div class="hero-badge-dot" aria-hidden="true"></div>
-      <span>Consultas abiertas para Barcelona y Chile</span>
-    </div>
-    <p class="hero-seo-label">Nutricionista digestiva en Barcelona</p>
-    <h1>
-      Sana tu<br>
-      digestión<br>
-      <em>desde la raíz.</em>
-    </h1>
-    <p class="hero-tagline">Sin dietas extremas. Sin dependencia de fármacos.</p>
-    <p class="hero-desc">
-      Especialista en microbiota, SIBO, reflujo e inflamación intestinal en Barcelona.
-      Método Doshas: nutrición funcional, ayurveda y psiconutrición integrados en un solo protocolo.
-      <strong class="d-block mt-10 color-ink-mid">Para personas que lo intentaron todo sin obtener resultados.</strong>
-    </p>
-    <div class="hero-actions">
-      <a href="#" onclick="openCountryModal(event)"   class="btn-primary">
-        Reservar evaluación — 20 € →
-      </a>
-      <a href="#metodo" class="btn-ghost">Ver el método</a>
-    </div>
-    <div class="hero-stats" role="list">
-      <div role="listitem">
-        <div class="hero-stat-number">99k+</div>
-        <div class="hero-stat-label">Seguidores</div>
-      </div>
-      <div role="listitem">
-        <div class="hero-stat-number">10+</div>
-        <div class="hero-stat-label">Años de experiencia</div>
-      </div>
-      <div role="listitem">
-        <div class="hero-stat-number">200+</div>
-        <div class="hero-stat-label">Casos digestivos</div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-right" aria-hidden="true">
-    <img
-  src="img/foto-mariajose-2.webp"
-  srcset="img/foto-mariajose-2-400w.webp 400w,
-          img/foto-mariajose-2.webp 800w"
-  sizes="(max-width: 768px) 100vw, 50vw"
-  alt="María José Guerra Valdés — Nutricionista digestiva Barcelona"
-  width="800"
-  height="1000"
-  loading="eager"
-  fetchpriority="high"
-  onerror="this.parentElement.classList.add('hero-right--fallback')"
-  class="img-cover"
->
-  </div>
-</section>
+      <div class="hero-left">
+        <div class="hero-badge">
+          <div class="hero-badge-dot" aria-hidden="true"></div>
+          <span>Consultas abiertas para Barcelona y Chile</span>
+        </div>
+        <p class="hero-seo-label">Nutricionista digestiva en Barcelona</p>
+        <h1>
+          Sana tu<br>
+          digestión<br>
+          <em>desde la raíz.</em>
+        </h1>
+        <p class="hero-tagline">Sin dietas extremas. Sin dependencia de fármacos.</p>
+        <p class="hero-desc">
+          Especialista en microbiota, SIBO, reflujo e inflamación intestinal en Barcelona.
+          Método Doshas: nutrición funcional, ayurveda y psiconutrición integrados en un solo protocolo.
+          <strong class="d-block mt-10 color-ink-mid">Para personas que lo intentaron todo sin obtener resultados.</strong>
+        </p>
+        <div class="hero-actions">
+          <a href="#" onclick="openCountryModal(event)" class="btn-primary">
+            Reservar evaluación — 20 € →
+          </a>
+          <a href="#metodo" class="btn-ghost">Ver el método</a>
+        </div>
+        <div class="hero-stats" role="list">
+          <div role="listitem">
+            <div class="hero-stat-number">99k+</div>
+            <div class="hero-stat-label">Seguidores</div>
+          </div>
+          <div role="listitem">
+            <div class="hero-stat-number">10+</div>
+            <div class="hero-stat-label">Años de experiencia</div>
+          </div>
+          <div role="listitem">
+            <div class="hero-stat-number">200+</div>
+            <div class="hero-stat-label">Casos digestivos</div>
+          </div>
+        </div>
+      </div><!-- /hero-left -->
+
+      <div class="hero-right" aria-hidden="true">
+        <img
+          src="/img/foto-mariajose-2.webp"
+          srcset="/img/foto-mariajose-2-400w.webp 400w,
+                  /img/foto-mariajose-2.webp      800w"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          alt="María José Guerra Valdés — Nutricionista digestiva Barcelona"
+          width="800"
+          height="1000"
+          loading="eager"
+          fetchpriority="high"
+          onerror="this.parentElement.classList.add('hero-right--fallback')"
+          class="img-cover">
+      </div><!-- /hero-right -->
+    </section><!-- /hero -->
+
 <!-- PATOLOGÍAS -->
 <section class="pain-section" aria-labelledby="pain-heading">
-  <div class="container">
-    <div class="pain-intro fade-up">
-      <span class="eyebrow">¿Te identificas?</span>
-      <h2 id="pain-heading">Tu cuerpo lleva años<br><em>enviándote señales.</em></h2>
-      <p class="pain-intro-desc">
-        Los problemas digestivos no son normales. Son síntomas de algo más profundo que ninguna pastilla puede resolver de forma permanente.
-      </p>
-    </div>
-    <div class="pain-grid" role="list" id="painGrid">
-      <article class="pain-card fade-up" role="listitem">
-        <div class="pain-icon" aria-hidden="true">🫧</div>
-        <h3>Hinchazón abdominal</h3>
-        <p>Te despiertas bien pero a media mañana ya pareces de 6 meses. Gases, presión, incomodidad constante. Te dijeron que es "estrés".</p>
-      </article>
-      <article class="pain-card fade-up" role="listitem">
-        <div class="pain-icon" aria-hidden="true">🔥</div>
-        <h3>Reflujo y acidez</h3>
-        <p>Dependes de los antiácidos para comer tranquila. Los médicos te dicen que es crónico. No tienen por qué tener razón.</p>
-      </article>
-      <article class="pain-card fade-up" role="listitem">
-        <div class="pain-icon" aria-hidden="true">🦠</div>
-        <h3>SIBO y microbiota alterada</h3>
-        <p>Intolerancia a todo, digestión lenta, cerebro en niebla. Tu microbiota está desequilibrada y hay un protocolo específico para ello.</p>
-      </article>
-      <article class="pain-card fade-up" role="listitem">
-        <div class="pain-icon" aria-hidden="true">😴</div>
-        <h3>Fatiga crónica</h3>
-        <p>Agotamiento que no cede con el descanso. Tu cuerpo gasta toda su energía en procesos inflamatorios que no deberían estar activos.</p>
-      </article>
-      <article class="pain-card fade-up" role="listitem">
-        <div class="pain-icon" aria-hidden="true">⚖️</div>
-        <h3>Peso que no se regula</h3>
-        <p>Subir o bajar de peso sin resultados duraderos. El problema no es la fuerza de voluntad — es el equilibrio del ecosistema intestinal.</p>
-      </article>
-      <article class="pain-card fade-up" role="listitem">
-        <div class="pain-icon" aria-hidden="true">🚫</div>
-        <h3>Intolerancias alimentarias</h3>
-        <p>Lactosa, gluten, FODMAP… parece que no puedes comer nada. Las intolerancias son síntoma, no el problema raíz.</p>
-      </article>
-      <article class="pain-card fade-up pain-card--extra" role="listitem" aria-hidden="true">
-        <div class="pain-icon" aria-hidden="true">🔄</div>
-        <h3>Estreñimiento o diarrea</h3>
-        <p>Tu tránsito nunca es predecible. La irregularidad intestinal crónica tiene origen en el ecosistema intestinal, no en la fibra.</p>
-      </article>
-      <article class="pain-card fade-up pain-card--extra" role="listitem" aria-hidden="true">
-        <div class="pain-icon" aria-hidden="true">🍄</div>
-        <h3>Cándida y H. pylori</h3>
-        <p>Fatiga, niebla mental, antojos de azúcar y digestión comprometida. Condiciones frecuentes con protocolo específico y natural.</p>
-      </article>
-      <article class="pain-card fade-up pain-card--extra" role="listitem" aria-hidden="true">
-        <div class="pain-icon" aria-hidden="true">🌸</div>
-        <h3>Acné y alergias en la piel</h3>
-        <p>La piel refleja el estado interno. Muchos problemas cutáneos tienen origen en la inflamación intestinal y el desequilibrio de la microbiota.</p>
-      </article>
-      <article class="pain-card fade-up pain-card--extra" role="listitem" aria-hidden="true">
-        <div class="pain-icon" aria-hidden="true">🦋</div>
-        <h3>Hipotiroidismo</h3>
-        <p>La tiroides y el intestino están estrechamente conectados. La inflamación crónica puede afectar la función tiroidea directamente.</p>
-      </article>
-    </div>
-    <div class="text-center mt-28">
-        <button
+      <div class="container">
+
+        <div class="pain-intro fade-up">
+          <span class="eyebrow">¿Te identificas?</span>
+          <h2 id="pain-heading">Tu cuerpo lleva años<br><em>enviándote señales.</em></h2>
+          <p class="pain-intro-desc">
+            Los problemas digestivos no son normales. Son síntomas de algo más profundo
+            que ninguna pastilla puede resolver de forma permanente.
+          </p>
+        </div>
+
+        <div class="pain-grid" role="list" id="painGrid">
+          <!-- Visibles por defecto -->
+          <article class="pain-card fade-up" role="listitem">
+            <div class="pain-icon" aria-hidden="true">🫧</div>
+            <h3>Hinchazón abdominal</h3>
+            <p>Te despiertas bien pero a media mañana ya pareces de 6 meses. Gases, presión, incomodidad constante. Te dijeron que es "estrés".</p>
+          </article>
+          <article class="pain-card fade-up" role="listitem">
+            <div class="pain-icon" aria-hidden="true">🔥</div>
+            <h3>Reflujo y acidez</h3>
+            <p>Dependes de los antiácidos para comer tranquila. Los médicos te dicen que es crónico. No tienen por qué tener razón.</p>
+          </article>
+          <article class="pain-card fade-up" role="listitem">
+            <div class="pain-icon" aria-hidden="true">🦠</div>
+            <h3>SIBO y microbiota alterada</h3>
+            <p>Intolerancia a todo, digestión lenta, cerebro en niebla. Tu microbiota está desequilibrada y hay un protocolo específico para ello.</p>
+          </article>
+          <article class="pain-card fade-up" role="listitem">
+            <div class="pain-icon" aria-hidden="true">😴</div>
+            <h3>Fatiga crónica</h3>
+            <p>Agotamiento que no cede con el descanso. Tu cuerpo gasta toda su energía en procesos inflamatorios que no deberían estar activos.</p>
+          </article>
+          <article class="pain-card fade-up" role="listitem">
+            <div class="pain-icon" aria-hidden="true">⚖️</div>
+            <h3>Peso que no se regula</h3>
+            <p>Subir o bajar de peso sin resultados duraderos. El problema no es la fuerza de voluntad — es el equilibrio del ecosistema intestinal.</p>
+          </article>
+          <article class="pain-card fade-up" role="listitem">
+            <div class="pain-icon" aria-hidden="true">🚫</div>
+            <h3>Intolerancias alimentarias</h3>
+            <p>Lactosa, gluten, FODMAP... parece que no puedes comer nada. Las intolerancias son síntoma, no el problema raíz.</p>
+          </article>
+
+          <!-- Ocultas hasta "Ver más" -->
+          <article class="pain-card fade-up pain-card--extra" role="listitem" aria-hidden="true">
+            <div class="pain-icon" aria-hidden="true">🔄</div>
+            <h3>Estreñimiento o diarrea</h3>
+            <p>Tu tránsito nunca es predecible. La irregularidad intestinal crónica tiene origen en el ecosistema intestinal, no en la fibra.</p>
+          </article>
+          <article class="pain-card fade-up pain-card--extra" role="listitem" aria-hidden="true">
+            <div class="pain-icon" aria-hidden="true">🍄</div>
+            <h3>Cándida y H. pylori</h3>
+            <p>Fatiga, niebla mental, antojos de azúcar y digestión comprometida. Condiciones frecuentes con protocolo específico y natural.</p>
+          </article>
+          <article class="pain-card fade-up pain-card--extra" role="listitem" aria-hidden="true">
+            <div class="pain-icon" aria-hidden="true">🌸</div>
+            <h3>Acné y alergias en la piel</h3>
+            <p>La piel refleja el estado interno. Muchos problemas cutáneos tienen origen en la inflamación intestinal y el desequilibrio de la microbiota.</p>
+          </article>
+          <article class="pain-card fade-up pain-card--extra" role="listitem" aria-hidden="true">
+            <div class="pain-icon" aria-hidden="true">🦋</div>
+            <h3>Hipotiroidismo</h3>
+            <p>La tiroides y el intestino están estrechamente conectados. La inflamación crónica puede afectar la función tiroidea directamente.</p>
+          </article>
+        </div><!-- /pain-grid -->
+
+        <div class="text-center mt-28">
+          <button
             class="pain-expand-btn"
             id="painExpandBtn"
             aria-expanded="false"
             aria-controls="painGrid">
             Ver más condiciones <span class="pain-expand-icon">↓</span>
-        </button>
-    </div>
-  </div>
-</section>
+          </button>
+        </div>
+
+      </div>
+    </section><!-- /pain-section -->
+
 <!-- SOBRE MARÍA JOSÉ -->
 <section class="about-section" id="sobre-mi" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-image-wrap fade-up">
-        <img
-          src="img/foto-mariajose-about.webp"
-          alt="María José Guerra — Especialista en microbiota y digestión Barcelona"
-          width="600" height="800" loading="lazy"
-          class="img-cover img-ratio-3-4">
-        <div class="about-credential-card">
-          <h4>Nutricionista · Ayurveda · PNI</h4>
-          <p>Nutricionista y Dietista (5 años, Chile) · Terapeuta en Medicina Ayurveda (1 año, Chile) · Terapeuta en PNI (2 años, España)</p>
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-image-wrap fade-up">
+            <img
+              src="/img/foto-mariajose2.webp"
+              alt="María José Guerra — Especialista en microbiota y digestión Barcelona"
+              width="600"
+              height="800"
+              loading="lazy"
+              class="img-cover img-ratio-3-4">
+            <div class="about-credential-card">
+              <h4>Nutricionista · Ayurveda · PNI</h4>
+              <p>Nutricionista y Dietista (5 años, Chile) · Terapeuta en Medicina Ayurveda (1 año, Chile) · Terapeuta en PNI (2 años, España)</p>
+            </div>
+          </div>
+
+          <div class="about-content fade-up">
+            <span class="eyebrow">Sobre la especialista</span>
+            <h2 id="about-heading">
+              María José Guerra,<br>
+              <em>especialista en digestión</em><br>
+              integrativa.
+            </h2>
+            <p>
+              Más del 80 % de mis pacientes ya habían visitado al menos 3 especialistas sin un diagnóstico claro antes de llegar a Doshas.
+              No trato síntomas aislados — estudio tu caso completo: tu microbiota, tu historial digestivo, tu tipo constitucional, tus patrones emocionales.
+            </p>
+            <p>
+              Soy nutricionista especializada en salud digestiva, microbiota e inflamación intestinal, con sede en Barcelona.
+              Mi método combina la ciencia de la psiconeuroinmunología (PNI) con los principios del Ayurveda para crear protocolos únicos
+              que abordan el problema desde múltiples ángulos.
+            </p>
+            <div class="about-tags" role="list">
+              <span class="tag" role="listitem">SIBO</span>
+              <span class="tag" role="listitem">Microbiota</span>
+              <span class="tag" role="listitem">Inflamación intestinal</span>
+              <span class="tag" role="listitem">Reflujo</span>
+              <span class="tag" role="listitem">H. pylori</span>
+              <span class="tag" role="listitem">Cándida</span>
+              <span class="tag" role="listitem">Psiconutrición</span>
+              <span class="tag" role="listitem">Ayurveda</span>
+              <span class="tag" role="listitem">Peso saludable</span>
+              <span class="tag" role="listitem">Fatiga crónica</span>
+              <span class="tag" role="listitem">Hipotiroidismo</span>
+              <span class="tag" role="listitem">Acné · Piel</span>
+            </div>
+            <a href="#" onclick="openCountryModal(event)" class="btn-primary">
+              Solicitar evaluación — 45 min
+            </a>
+          </div>
+
         </div>
       </div>
-      <div class="about-content fade-up">
-        <span class="eyebrow">Sobre la especialista</span>
-        <h2 id="about-heading">
-          María José Guerra,<br>
-          <em>especialista en digestión</em><br>
-          integrativa.
-        </h2>
-        <p>
-          Más del 80 % de mis pacientes ya habían visitado al menos 3 especialistas sin un diagnóstico claro antes de llegar a Doshas.
-          No trato síntomas aislados — estudio tu caso completo: tu microbiota, tu historial digestivo, tu tipo constitucional, tus patrones emocionales.
-        </p>
-        <p>
-          Soy nutricionista especializada en salud digestiva, microbiota e inflamación intestinal, con sede en Barcelona.
-          Mi método combina la ciencia de la psiconeuroinmunología (PNI) con los principios del Ayurveda para crear protocolos únicos
-          que abordan el problema desde múltiples ángulos.
-        </p>
-        <div class="about-tags" role="list">
-          <span class="tag" role="listitem">SIBO</span>
-          <span class="tag" role="listitem">Microbiota</span>
-          <span class="tag" role="listitem">Inflamación intestinal</span>
-          <span class="tag" role="listitem">Reflujo</span>
-          <span class="tag" role="listitem">H. pylori</span>
-          <span class="tag" role="listitem">Cándida</span>
-          <span class="tag" role="listitem">Psiconutrición</span>
-          <span class="tag" role="listitem">Ayurveda</span>
-          <span class="tag" role="listitem">Peso saludable</span>
-          <span class="tag" role="listitem">Fatiga crónica</span>
-          <span class="tag" role="listitem">Hipotiroidismo</span>
-          <span class="tag" role="listitem">Acné · Piel</span>
+    </section><!-- /about-section -->
+
+<!-- YOUTUBE -->
+<section class="youtube-section" aria-labelledby="youtube-heading">
+      <div class="container">
+
+        <div class="youtube-header fade-up">
+          <span class="eyebrow">Canal de YouTube</span>
+          <h2 id="youtube-heading">Aprende sobre<br><em>tu digestión</em></h2>
+          <p>Videos educativos gratuitos sobre microbiota, SIBO, reflujo y salud digestiva integrativa. Entiende tu cuerpo antes de dar el paso.</p>
         </div>
-        <a href="#" onclick="openCountryModal(event)" class="btn-primary">
-          Solicitar evaluación — 45 min
-        </a>
+
+        <!-- Facade: carga el iframe solo al hacer click -->
+        <div
+          class="youtube-facade fade-up"
+          id="ytFacade"
+          role="button"
+          tabindex="0"
+          aria-label="Reproducir vídeo de YouTube"
+          onclick="loadYouTube()"
+          onkeydown="if(event.key==='Enter'||event.key===' ')loadYouTube()">
+          <img
+            src="https://i.ytimg.com/vi/BKX23KCKz5Q/maxresdefault.jpg"
+            alt="Vídeo sobre salud digestiva — Doshas Nutrición"
+            loading="lazy"
+            decoding="async"
+            onerror="this.src='https://i.ytimg.com/vi/BKX23KCKz5Q/hqdefault.jpg'"
+            class="img-cover">
+          <div class="youtube-play-btn" aria-hidden="true">
+            <svg viewBox="0 0 68 48" width="68" height="48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#ff0000"/>
+              <path d="M45 24L27 14v20" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="youtube-channel-link fade-up">
+          <a href="https://www.youtube.com/@doshasnutricion59" rel="noopener" target="_blank">
+            Ver todos los vídeos en YouTube
+          </a>
+        </div>
+
       </div>
-    </div>
-  </div>
-</section>
+    </section><!-- /youtube-section -->
+
 <!-- MÉTODO DOSHAS -->
 <section class="method-section" id="metodo" aria-labelledby="method-heading">
-  <div class="container">
-    <div class="method-header fade-up">
-      <span class="eyebrow">El método</span>
-      <h2 id="method-heading">El Método Doshas: 3 pasos de Reprogramación Digestiva</h2>
-      <p>Doshas no es una dieta. Es un método que cambia la manera en que te relacionas con la comida y con tu cuerpo. Tres procesos. Resultados para siempre.</p>
-    </div>
-    <div class="method-steps">
-      <article class="method-step fade-up">
-        <div class="method-step-num" aria-hidden="true">01</div>
-        <h3>Desintoxicar</h3>
-        <p>Eliminamos los alimentos que te hacen daño y que producen síntomas como acidez o hinchazón. Limpiamos el cuerpo para bajar la inflamación y que tu sistema inmune deje de estar alterado.</p>
-        <p class="method-detail">Duración aproximada: 2 meses. Puedes notar cambios como menos hinchazón en manos, pies y cara, más ánimo y menos ansiedad.</p>
-      </article>
-      <article class="method-step fade-up">
-        <div class="method-step-num" aria-hidden="true">02</div>
-        <h3>Nutrir</h3>
-        <p>Incorporamos un plan de alimentación con alimentos naturales, evitando procesados. Mejoramos tu microbiota con probióticos, fibra y fermentados. También nutrimos el alma: meditaciones, respiraciones y actividad física adecuada para ti.</p>
-        <p class="method-detail">A esta altura los cambios son notables: sin ansiedad, mejor sueño, energía renovada.</p>
-      </article>
-      <article class="method-step fade-up">
-        <div class="method-step-num" aria-hidden="true">03</div>
-        <h3>Transformar</h3>
-        <p>Reintroducimos los alimentos que eliminamos al principio. La idea de Doshas es volverte a tu hábitat: que puedas comer de todo y disfrutar de tu vida sin dolencias gastrointestinales.</p>
-        <p class="method-detail">"El veneno está en la dosis." Consumir tus favoritos ocasionalmente no es un problema. Así logramos una transformación que dura.</p>
-      </article>
-    </div>
-  </div>
-</section>
+      <div class="container">
+
+        <div class="method-header fade-up">
+          <span class="eyebrow">El método</span>
+          <h2 id="method-heading">El Método Doshas: 3 pasos de Reprogramación Digestiva</h2>
+          <p>Doshas no es una dieta. Es un método que cambia la manera en que te relacionas con la comida y con tu cuerpo. Tres procesos. Resultados para siempre.</p>
+        </div>
+
+        <div class="method-steps">
+          <article class="method-step fade-up">
+            <div class="method-step-num" aria-hidden="true">01</div>
+            <h3>Desintoxicar</h3>
+            <p>Eliminamos los alimentos que te hacen daño y que producen síntomas como acidez o hinchazón. Limpiamos el cuerpo para bajar la inflamación y que tu sistema inmune deje de estar alterado.</p>
+            <p class="method-detail">Duración aproximada: 2 meses. Puedes notar cambios como menos hinchazón en manos, pies y cara, más ánimo y menos ansiedad.</p>
+          </article>
+          <article class="method-step fade-up">
+            <div class="method-step-num" aria-hidden="true">02</div>
+            <h3>Nutrir</h3>
+            <p>Incorporamos un plan de alimentación con alimentos naturales, evitando procesados. Mejoramos tu microbiota con probióticos, fibra y fermentados. También nutrimos el alma: meditaciones, respiraciones y actividad física adecuada para ti.</p>
+            <p class="method-detail">A esta altura los cambios son notables: sin ansiedad, mejor sueño, energía renovada.</p>
+          </article>
+          <article class="method-step fade-up">
+            <div class="method-step-num" aria-hidden="true">03</div>
+            <h3>Transformar</h3>
+            <p>Reintroducimos los alimentos que eliminamos al principio. La idea de Doshas es volverte a tu hábitat: que puedas comer de todo y disfrutar de tu vida sin dolencias gastrointestinales.</p>
+            <p class="method-detail">"El veneno está en la dosis." Consumir tus favoritos ocasionalmente no es un problema. Así logramos una transformación que dura.</p>
+          </article>
+        </div>
+
+      </div>
+    </section><!-- /method-section -->
+
 <!-- SERVICIOS -->
-<section class="services-section" id="servicios" aria-labelledby="services-heading">
-  <div class="container">
-    <div class="services-header fade-up">
-      <div>
-        <span class="eyebrow">Programa</span>
-        <h2 id="services-heading">Programa Reprogramación<br><em>Digestiva: lo que incluye</em></h2>
-      </div>
-      <p>El acceso al programa es por evaluación previa. María José revisa cada caso individualmente y determina si Doshas es la solución adecuada para ti.</p>
-    </div>
-    <div class="program-card fade-up">
-      <div>
-        <span class="program-tag">Programa único</span>
-        <h3 class="program-name">Reprogramación<br><em>Digestiva</em></h3>
-        <p class="program-desc">
-          Un programa completo donde abordamos tu caso digestivo de forma integral.
-          Para personas con SIBO, disbiosis, inflamación intestinal, reflujo, problemas de peso, fatiga crónica,
-          hipotiroidismo, acné o intolerancias que no han respondido a tratamientos convencionales.
-        </p>
-        <div class="program-includes">
-          <p class="program-includes-label">Incluye</p>
-          <ul class="program-list">
-            <li>Evaluación inicial completa de 90 minutos</li>
-            <li>Diagnóstico integrativo + tipo Dosha</li>
-            <li>Protocolo nutricional personalizado</li>
-            <li>Seguimiento individualizado en cada etapa</li>
-            <li>Acceso a comunidad privada y recursos</li>
-            <li>Protocolo de psiconutrición · meditaciones · respiraciones</li>
-            <li>Suplementación natural guiada (magnesio, omega-3 y más)</li>
-            <li>Acceso a Skool comunidad</li>
-            <li>Soporte WhatsApp entre sesiones</li>
-          </ul>
+ <section class="services-section" id="servicios" aria-labelledby="services-heading">
+      <div class="container">
+
+        <div class="services-header fade-up">
+          <div>
+            <span class="eyebrow">Programa</span>
+            <h2 id="services-heading">Programa Reprogramación<br><em>Digestiva: lo que incluye</em></h2>
+          </div>
+          <p>El acceso al programa es por evaluación previa. María José revisa cada caso individualmente y determina si Doshas es la solución adecuada para ti.</p>
         </div>
+
+        <div class="program-card fade-up">
+          <div>
+            <span class="program-tag">Programa único</span>
+            <h3 class="program-name">Reprogramación<br><em>Digestiva</em></h3>
+            <p class="program-desc">
+              Un programa completo donde abordamos tu caso digestivo de forma integral.
+              Para personas con SIBO, disbiosis, inflamación intestinal, reflujo, problemas de peso, fatiga crónica,
+              hipotiroidismo, acné o intolerancias que no han respondido a tratamientos convencionales.
+            </p>
+            <div class="program-includes">
+              <p class="program-includes-label">Incluye</p>
+              <ul class="program-list">
+                <li>Evaluación inicial completa de 90 minutos</li>
+                <li>Diagnóstico integrativo + tipo Dosha</li>
+                <li>Protocolo nutricional personalizado</li>
+                <li>Seguimiento individualizado en cada etapa</li>
+                <li>Acceso a comunidad privada y recursos</li>
+                <li>Protocolo de psiconutrición · meditaciones · respiraciones</li>
+                <li>Suplementación natural guiada (magnesio, omega-3 y más)</li>
+                <li>Acceso a Skool comunidad</li>
+                <li>Soporte WhatsApp entre sesiones</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="program-access-box">
+            <div class="program-access-icon">🌿</div>
+            <p class="program-access-title">El programa no está<br>disponible para todos.</p>
+            <div class="program-access-note">
+              María José dedica 45 minutos completos a cada caso.
+              Los <strong class="color-orange">20 €</strong> garantizan que ese tiempo —el tuyo y el suyo— se aprovecha al máximo.
+              El acceso al programa es limitado y te dirá con total honestidad si Doshas no es para ti.
+            </div>
+            <a href="#" onclick="openCountryModal(event)" class="btn-white">
+              Reservar evaluación personalizada — 20 €
+            </a>
+            <p class="program-access-legal">45 minutos · Online · Pago seguro vía Stripe</p>
+          </div>
+        </div><!-- /program-card -->
+
       </div>
-      <div class="program-access-box">
-        <div class="program-access-icon">🌿</div>
-        <p class="program-access-title">
-          El programa no está<br>disponible para todos.
-        </p>
-        <div class="program-access-note">
-          María José dedica 45 minutos completos a cada caso. Los <strong class="color-orange">20 €</strong> garantizan que ese tiempo —el tuyo y el suyo— se aprovecha al máximo. El acceso al programa es limitado y te dirá con total honestidad si Doshas no es para ti.
-        </div>
-        <a href="#" onclick="openCountryModal(event)" class="btn-white">
-          Reservar evaluación personalizada — 20 €
-        </a>
-        <p class="program-access-legal">
-          45 minutos · Online · Pago seguro vía Stripe
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- TESTIMONIOS REALES -->
+    </section><!-- /services-section -->
+
+<!-- TESTIMONIOS  -->
 <section class="results-section" aria-labelledby="results-heading">
-  <div class="container">
-    <div class="results-header fade-up">
-      <span class="eyebrow">Resultados reales</span>
-      <h2 id="results-heading">Lo que dicen quienes<br><em>ya mejoraron su digestión</em></h2>
-    </div>
-    <div class="testimonials-grid testimonials-grid--expanded" role="list">
-      <article class="testimonial-card testimonial-card--featured fade-up" role="listitem">
-        <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
-        <p class="testimonial-quote">
-          "Empecé con SIBO y en 3 meses ya se me fue la hinchazón, la pesadez, el estreñimiento y los gases. Antes pensaba que tendría que vivir así para siempre. Ahora disfruto las comidas, las reuniones, las celebraciones sin molestias y sin medicamentos. Hasta me cambió el estado de ánimo y duermo bien."
-        </p>
-        <div class="testimonial-result">✓ SIBO resuelto · Sin medicamentos · Mejor sueño y ánimo</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar" aria-hidden="true">CT</div>
-          <div>
-            <div class="testimonial-name">Claudia Torres</div>
-            <div class="testimonial-detail">Consulta Online · Enero 2025 · Enfermedades gastrointestinales</div>
-          </div>
+      <div class="container">
+
+        <div class="results-header fade-up">
+          <span class="eyebrow">Resultados reales</span>
+          <h2 id="results-heading">Lo que dicen quienes<br><em>ya mejoraron su digestión</em></h2>
         </div>
-      </article>
-      <article class="testimonial-card testimonial-card--featured fade-up" role="listitem">
-        <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
-        <p class="testimonial-quote">
-          "Llevo 2 meses de tratamiento y dejé los medicamentos para el estómago. Antes tenía mucha acidez, hinchazón y dolor. Ahora puedo comer cosas que antes me hacían mal. Bajé 2 kilos, mi barriga se desinflamó bastante — pude volver a ponerme ropa que había dejado de usar. Y lo mejor: no paso hambre."
-        </p>
-        <div class="testimonial-result">✓ Sin medicamentos · −2 kg · Inflamación reducida en 2 meses</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar" aria-hidden="true">AV</div>
-          <div>
-            <div class="testimonial-name">Andrea V.</div>
-            <div class="testimonial-detail">Consulta Online · Marzo 2025 · Enfermedades gastrointestinales</div>
-          </div>
+
+        <div class="testimonials-grid testimonials-grid--expanded" role="list">
+
+          <article class="testimonial-card testimonial-card--featured fade-up" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="testimonial-quote">"Empecé con SIBO y en 3 meses ya se me fue la hinchazón, la pesadez, el estreñimiento y los gases. Antes pensaba que tendría que vivir así para siempre. Ahora disfruto las comidas, las reuniones, las celebraciones sin molestias y sin medicamentos. Hasta me cambió el estado de ánimo y duermo bien."</p>
+            <div class="testimonial-result">✓ SIBO resuelto · Sin medicamentos · Mejor sueño y ánimo</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">CT</div>
+              <div>
+                <div class="testimonial-name">Claudia Torres</div>
+                <div class="testimonial-detail">Consulta Online · Enero 2025 · Enfermedades gastrointestinales</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card testimonial-card--featured fade-up" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="testimonial-quote">"Llevo 2 meses de tratamiento y dejé los medicamentos para el estómago. Antes tenía mucha acidez, hinchazón y dolor. Ahora puedo comer cosas que antes me hacían mal. Bajé 2 kilos, mi barriga se desinflamó bastante — pude volver a ponerme ropa que había dejado de usar. Y lo mejor: no paso hambre."</p>
+            <div class="testimonial-result">✓ Sin medicamentos · −2 kg · Inflamación reducida en 2 meses</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">AV</div>
+              <div>
+                <div class="testimonial-name">Andrea V.</div>
+                <div class="testimonial-detail">Consulta Online · Marzo 2025 · Enfermedades gastrointestinales</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card fade-up" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="testimonial-quote">"Mi madre, de 75 años, sufría un nivel de acidez que ya afectaba su calidad de vida. Pero cayeron en las mejores manos. Hoy ya no toma medicamentos y su acidez está cada día más en retirada. ¡Gracias, gracias, gracias!"</p>
+            <div class="testimonial-result">✓ Acidez crónica revertida · Sin medicamentos</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">D</div>
+              <div>
+                <div class="testimonial-name">Daniela</div>
+                <div class="testimonial-detail">Consulta Online · Marzo 2025 · Enfermedades gastrointestinales</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card fade-up" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="testimonial-quote">"Al fin logré bajar de peso, sin pasar hambre y comiendo rico. Muy dedicada, con muy buenas ideas. Y también logré superar el SIBO. Mil gracias M.ª José por tu dedicación."</p>
+            <div class="testimonial-result">✓ SIBO superado · Pérdida de peso sostenible</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">AD</div>
+              <div>
+                <div class="testimonial-name">Adriana Valdés</div>
+                <div class="testimonial-detail">Consulta Online · Enero 2025 · Alimentación low carb</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card fade-up" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="testimonial-quote">"Excelente profesional, es mi salvación para dejar las pastillas que me habían hecho mucho daño. Siempre la recomiendo."</p>
+            <div class="testimonial-result">✓ Eliminación de medicamentos dañinos</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">RH</div>
+              <div>
+                <div class="testimonial-name">Rossana Huaman Montoya</div>
+                <div class="testimonial-detail">Doshas Nutrición · Agosto 2025 · Enfermedades gastrointestinales</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card fade-up" role="listitem">
+            <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+            <p class="testimonial-quote">"¡María José es fantástica! Mis problemas intestinales han desaparecido. Es muy didáctica, se hace entender muy bien y las indicaciones que da se adaptan a mis necesidades y a mi estilo de vida. Recomendadísima."</p>
+            <div class="testimonial-result">✓ Problemas intestinales resueltos</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">AR</div>
+              <div>
+                <div class="testimonial-name">Álvaro Rosal Garaizabal</div>
+                <div class="testimonial-detail">Consulta Online · Enero 2025 · Enfermedades gastrointestinales</div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /testimonials-grid -->
+
+        <p class="disclaimer-note">* Testimonios reales de pacientes verificados en Doctoralia. Los resultados pueden variar según cada caso.</p>
+
+        <div class="text-center mt-24">
+          <a
+            href="https://www.doctoralia.cl/maria-jose-guerra-valdes/nutricionista/la-serena"
+            rel="noopener"
+            target="_blank"
+            class="btn-ghost btn-ghost--teal btn-ghost--sm btn-ghost--bold">
+            Ver todas las valoraciones en Doctoralia →
+          </a>
         </div>
-      </article>
-      <article class="testimonial-card fade-up" role="listitem">
-        <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
-        <p class="testimonial-quote">
-          "Mi madre, de 75 años, sufría un nivel de acidez que ya afectaba su calidad de vida. Pero cayeron en las mejores manos. Hoy ya no toma medicamentos y su acidez está cada día más en retirada. ¡Gracias, gracias, gracias!"
-        </p>
-        <div class="testimonial-result">✓ Acidez crónica revertida · Sin medicamentos</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar" aria-hidden="true">D</div>
-          <div>
-            <div class="testimonial-name">Daniela</div>
-            <div class="testimonial-detail">Consulta Online · Marzo 2025 · Enfermedades gastrointestinales</div>
-          </div>
-        </div>
-      </article>
-      <article class="testimonial-card fade-up" role="listitem">
-        <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
-        <p class="testimonial-quote">
-          "Al fin logré bajar de peso, sin pasar hambre y comiendo rico. Muy dedicada, con muy buenas ideas. Y también logré superar el SIBO. Mil gracias M.ª José por tu dedicación."
-        </p>
-        <div class="testimonial-result">✓ SIBO superado · Pérdida de peso sostenible</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar" aria-hidden="true">AD</div>
-          <div>
-            <div class="testimonial-name">Adriana Valdés</div>
-            <div class="testimonial-detail">Consulta Online · Enero 2025 · Alimentación low carb</div>
-          </div>
-        </div>
-      </article>
-      <article class="testimonial-card fade-up" role="listitem">
-        <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
-        <p class="testimonial-quote">
-          "Excelente profesional, es mi salvación para dejar las pastillas que me habían hecho mucho daño. Siempre la recomiendo."
-        </p>
-        <div class="testimonial-result">✓ Eliminación de medicamentos dañinos</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar" aria-hidden="true">RH</div>
-          <div>
-            <div class="testimonial-name">Rossana Huaman Montoya</div>
-            <div class="testimonial-detail">Doshas Nutrición · Agosto 2025 · Enfermedades gastrointestinales</div>
-          </div>
-        </div>
-      </article>
-      <article class="testimonial-card fade-up" role="listitem">
-        <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
-        <p class="testimonial-quote">
-          "¡María José es fantástica! Mis problemas intestinales han desaparecido. Es muy didáctica, se hace entender muy bien y las indicaciones que da se adaptan a mis necesidades y a mi estilo de vida. Recomendadísima."
-        </p>
-        <div class="testimonial-result">✓ Problemas intestinales resueltos</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar" aria-hidden="true">AR</div>
-          <div>
-            <div class="testimonial-name">Álvaro Rosal Garaizabal</div>
-            <div class="testimonial-detail">Consulta Online · Enero 2025 · Enfermedades gastrointestinales</div>
-          </div>
-        </div>
-      </article>
-    </div>
-    <p class="disclaimer-note">* Testimonios reales de pacientes verificados en Doctoralia. Los resultados pueden variar según cada caso.</p>
-    <div class="text-center mt-24">
-      <a href="https://www.doctoralia.cl/maria-jose-guerra-valdes/nutricionista/la-serena" rel="noopener" target="_blank" class="btn-ghost btn-ghost--teal btn-ghost--sm btn-ghost--bold">
-        Ver todas las valoraciones en Doctoralia →
-      </a>
-    </div>
-  </div>
-</section>
+
+      </div>
+    </section><!-- /results-section -->
+
 <!-- PROCESO -->
 <section class="process-section" aria-labelledby="process-heading">
-  <div class="container">
-    <div class="process-header fade-up">
-      <span class="eyebrow">¿Cómo funciona?</span>
-      <h2 id="process-heading">Tu camino hacia<br><em>la salud digestiva</em></h2>
-    </div>
-    <div class="process-steps" role="list">
-      <div class="process-step fade-up" role="listitem">
-        <div class="process-step-circle" aria-hidden="true">1</div>
-        <h3>Consulta de diagnóstico</h3>
-        <p>45 minutos de atención completa (20 €). María José analiza tu caso en profundidad y te dice con total honestidad si el programa es para ti.</p>
+      <div class="container">
+
+        <div class="process-header fade-up">
+          <span class="eyebrow">¿Cómo funciona?</span>
+          <h2 id="process-heading">Tu camino hacia<br><em>la salud digestiva</em></h2>
+        </div>
+
+        <div class="process-steps" role="list">
+          <div class="process-step fade-up" role="listitem">
+            <div class="process-step-circle" aria-hidden="true">1</div>
+            <h3>Consulta de diagnóstico</h3>
+            <p>45 minutos de atención completa (20 €). María José analiza tu caso en profundidad y te dice con total honestidad si el programa es para ti.</p>
+          </div>
+          <div class="process-step fade-up" role="listitem">
+            <div class="process-step-circle" aria-hidden="true">2</div>
+            <h3>Diagnóstico digestivo</h3>
+            <p>Análisis completo de tu historial, síntomas, estilo de vida y constitución. Se identifica el origen real del problema.</p>
+          </div>
+          <div class="process-step fade-up" role="listitem">
+            <div class="process-step-circle" aria-hidden="true">3</div>
+            <h3>Protocolo personalizado</h3>
+            <p>Plan nutricional diseñado para ti, tu Dosha y tu condición digestiva. Sin plantillas, sin dietas genéricas.</p>
+          </div>
+          <div class="process-step fade-up" role="listitem">
+            <div class="process-step-circle" aria-hidden="true">4</div>
+            <h3>Transformación</h3>
+            <p>Seguimiento, psiconutrición y hábitos que sostienen los resultados de forma permanente.</p>
+          </div>
+        </div>
+
       </div>
-      <div class="process-step fade-up" role="listitem">
-        <div class="process-step-circle" aria-hidden="true">2</div>
-        <h3>Diagnóstico digestivo</h3>
-        <p>Análisis completo de tu historial, síntomas, estilo de vida y constitución. Se identifica el origen real del problema.</p>
-      </div>
-      <div class="process-step fade-up" role="listitem">
-        <div class="process-step-circle" aria-hidden="true">3</div>
-        <h3>Protocolo personalizado</h3>
-        <p>Plan nutricional diseñado para ti, tu Dosha y tu condición digestiva. Sin plantillas, sin dietas genéricas.</p>
-      </div>
-      <div class="process-step fade-up" role="listitem">
-        <div class="process-step-circle" aria-hidden="true">4</div>
-        <h3>Transformación</h3>
-        <p>Seguimiento, psiconutrición y hábitos que sostienen los resultados de forma permanente.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section><!-- /process-section -->
+
 <!-- BLOG
 <section class="blog-section" id="blog" aria-labelledby="blog-heading">
   <div class="container">
@@ -629,124 +882,101 @@ justify-content:center;padding:120px 60px 80px 80px}
 -->
 <!-- COMUNIDAD -->
 <section class="community-section" aria-labelledby="community-heading">
-  <div class="container">
-    <div class="community-grid">
-      <div class="community-content fade-up">
-        <span class="eyebrow">Comunidad activa</span>
-        <h2 id="community-heading">99.000 personas ya<br><em>aprendieron a cuidar<br>su digestión</em></h2>
-        <p>En Instagram y YouTube, María José comparte cada semana contenido gratuito sobre microbiota, SIBO, reflujo y salud digestiva integrativa — basado en los mismos principios del Método Doshas.</p>
-        <p>Una comunidad activa de personas que, como tú, buscaban respuestas que el sistema convencional no les daba.</p>
-        <ul class="community-list">
-          <li>🌿 Protocolos de desinflamación explicados paso a paso</li>
-          <li>🌿 Casos reales de pacientes que superaron el SIBO y el reflujo</li>
-          <li>🌿 Herramientas de psiconutrición aplicadas al día a día</li>
-          <li>🌿 Respuestas a preguntas que los médicos no suelen contestar</li>
-        </ul>
-        <p class="community-frequency">Contenido nuevo cada semana. Sin vender dietas mágicas ni suplementos innecesarios.</p>
-        <div class="flex-row flex-wrap gap-12 align-center">
-          <a href="https://www.instagram.com/mariajoseguerravaldes/" class="btn-primary" rel="noopener" target="_blank">
-            Seguir en Instagram →
-          </a>
-          <a href="#calendly" class="btn-ghost btn-ghost--white">
-            O reserva tu evaluación
-          </a>
+      <div class="container">
+        <div class="community-grid">
+
+          <div class="community-content fade-up">
+            <span class="eyebrow">Comunidad activa</span>
+            <h2 id="community-heading">99.000 personas ya<br><em>aprendieron a cuidar<br>su digestión</em></h2>
+            <p>En Instagram y YouTube, María José comparte cada semana contenido gratuito sobre microbiota, SIBO, reflujo y salud digestiva integrativa — basado en los mismos principios del Método Doshas.</p>
+            <p>Una comunidad activa de personas que, como tú, buscaban respuestas que el sistema convencional no les daba.</p>
+            <ul class="community-list">
+              <li>🌿 Protocolos de desinflamación explicados paso a paso</li>
+              <li>🌿 Casos reales de pacientes que superaron el SIBO y el reflujo</li>
+              <li>🌿 Herramientas de psiconutrición aplicadas al día a día</li>
+              <li>🌿 Respuestas a preguntas que los médicos no suelen contestar</li>
+            </ul>
+            <p class="community-frequency">Contenido nuevo cada semana. Sin vender dietas mágicas ni suplementos innecesarios.</p>
+            <div class="flex-row flex-wrap gap-12 align-center">
+              <a href="https://www.instagram.com/mariajoseguerravaldes/" class="btn-primary" rel="noopener" target="_blank">
+                Seguir en Instagram →
+              </a>
+              <a href="#calendly" class="btn-ghost btn-ghost--white">
+                O reserva tu evaluación
+              </a>
+            </div>
+          </div>
+
+          <div class="community-card fade-up">
+            <div class="community-card-inner">
+              <div class="community-card-icon">✨</div>
+              <p class="community-card-title">+99.000 seguidores</p>
+              <p class="community-card-subtitle">Instagram y YouTube combinados</p>
+              <div class="community-divider"></div>
+              <p class="community-card-body">Cada semana, miles de personas aprenden a entender su digestión desde la raíz. El conocimiento es el primer paso de la transformación.</p>
+              <p class="community-card-question">"¿Lista para dar el siguiente paso?"</p>
+              <a href="#calendly" class="btn-white mt-22">Reservar evaluación →</a>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="community-card fade-up">
-        <div class="community-card-inner">
-          <div class="community-card-icon">✨</div>
-          <p class="community-card-title">+99.000 seguidores</p>
-          <p class="community-card-subtitle">Instagram y YouTube combinados</p>
-          <div class="community-divider"></div>
-          <p class="community-card-body">Cada semana, miles de personas aprenden a entender su digestión desde la raíz. El conocimiento es el primer paso de la transformación.</p>
-          <p class="community-card-question">"¿Lista para dar el siguiente paso?"</p>
-          <a href="#calendly" class="btn-white mt-22">
-            Reservar evaluación →
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section><!-- /community-section -->
+
 <!-- CTA + CALENDLY -->
 <section class="cta-section" id="calendly" aria-labelledby="cta-heading">
-  <div class="container">
-    <span class="eyebrow">Primer paso</span>
-    <h2 id="cta-heading">
-      ¿Lista para sanar<br>
-      <em>tu digestión de una vez?</em>
-    </h2>
-    <p>
-      Reserva tu evaluación de 45 minutos con María José. Analizamos tu caso, entendemos qué está pasando en tu digestión y evaluamos si el programa es para ti. Valor: 20 €.
-    </p>
-    <a href="#" onclick="openCountryModal(event)" class="btn-cta-white">
-      Reservar evaluación — 20 € →
-    </a>
-    <p class="cta-urgency">
-      María José trabaja con un máximo de 8 pacientes nuevos al mes para garantizar atención personalizada · Pago seguro vía Stripe
-    </p>
-    <p class="cta-legal">
-      🤍 Evaluación Reprogramación Digestiva · 45 min · Online · 20 €
-    </p>
-  </div>
-</section>
-<!-- YOUTUBE -->
-<section class="youtube-section" aria-labelledby="youtube-heading">
-  <div class="container">
-    <div class="youtube-header fade-up">
-      <span class="eyebrow">Canal de YouTube</span>
-      <h2 id="youtube-heading">Aprende sobre<br><em>tu digestión</em></h2>
-      <p>Videos educativos gratuitos sobre microbiota, SIBO, reflujo y salud digestiva integrativa. Entiende tu cuerpo antes de dar el paso.</p>
-    </div>
-    <div class="youtube-facade fade-up" id="ytFacade" onclick="loadYouTube()" role="button" tabindex="0" aria-label="Reproducir vídeo de YouTube" onkeydown="if(event.key==='Enter'||event.key===' ')loadYouTube()">
-      <img
-  src="https://i.ytimg.com/vi/YNkB1huKLEw/maxresdefault.jpg"
-  alt="Vídeo sobre salud digestiva — Doshas Nutrición"
-  loading="lazy"
-  decoding="async"
-  onerror="this.src='https://i.ytimg.com/vi/YNkB1huKLEw/hqdefault.jpg'"
-  class="img-cover">
-      <div class="youtube-play-btn" aria-hidden="true">
-        <svg viewBox="0 0 68 48" width="68" height="48" xmlns="http://www.w3.org/2000/svg">
-          <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#ff0000"/>
-          <path d="M45 24L27 14v20" fill="#fff"/>
-        </svg>
+      <div class="container">
+        <span class="eyebrow">Primer paso</span>
+        <h2 id="cta-heading">
+          ¿Lista para sanar<br>
+          <em>tu digestión de una vez?</em>
+        </h2>
+        <p>
+          Reserva tu evaluación de 45 minutos con María José. Analizamos tu caso, entendemos qué está pasando en tu digestión
+          y evaluamos si el programa es para ti. Valor: 20 €.
+        </p>
+        <a href="#" onclick="openCountryModal(event)" class="btn-cta-white">
+          Reservar evaluación — 20 € →
+        </a>
+        <p class="cta-urgency">
+          María José trabaja con un máximo de 8 pacientes nuevos al mes para garantizar atención personalizada · Pago seguro vía Stripe
+        </p>
+        <p class="cta-legal">
+          🤍 Evaluación Reprogramación Digestiva · 45 min · Online · 20 €
+        </p>
       </div>
-    </div>
-    <div class="youtube-channel-link fade-up">
-      <a href="https://www.youtube.com/@doshasnutricion59" rel="noopener" target="_blank">
-        Ver todos los vídeos en YouTube
-      </a>
-    </div>
-  </div>
-</section>
-</main>
+    </section><!-- /cta-section -->
+
+  </main>
+
 <!-- FOOTER -->
 <footer role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-brand-logo">
-          Doshas
-          <span>Nutrición de vida</span>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            Doshas
+            <span>Nutrición de vida</span>
+          </div>
+          <p>
+            Nutricionista especializada en digestión, microbiota y medicina integrativa.
+            Barcelona, España · Consultas online disponibles para Chile, España y todo el mundo.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/mariajoseguerravaldes/" class="footer-social-link" rel="noopener" target="_blank">Instagram</a>
+            <span class="footer-social-sep">·</span>
+            <a href="https://www.youtube.com/@doshasnutricion59"        class="footer-social-link" rel="noopener" target="_blank">YouTube</a>
+            <span class="footer-social-sep">·</span>
+            <a href="https://www.tiktok.com/@doshasnutricion"           class="footer-social-link" rel="noopener" target="_blank">TikTok</a>
+            <span class="footer-social-sep">·</span>
+            <a href="https://www.facebook.com/MariaJoseGuerranutricionista" class="footer-social-link" rel="noopener" target="_blank">Facebook</a>
+            <span class="footer-social-sep">·</span>
+            <a href="https://wa.me/34664331157"                         class="footer-social-link" rel="noopener" target="_blank">WhatsApp</a>
+          </div>
         </div>
-        <p>
-          Nutricionista especializada en digestión, microbiota y medicina integrativa.
-          Barcelona, España · Consultas online disponibles para Chile, España y todo el mundo.
-        </p>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/mariajoseguerravaldes/" class="footer-social-link" rel="noopener" target="_blank">Instagram</a>
-          <span class="footer-social-sep">·</span>
-          <a href="https://www.youtube.com/@doshasnutricion59" class="footer-social-link" rel="noopener" target="_blank">YouTube</a>
-          <span class="footer-social-sep">·</span>
-          <a href="https://www.tiktok.com/@doshasnutricion" class="footer-social-link" rel="noopener" target="_blank">TikTok</a>
-          <span class="footer-social-sep">·</span>
-          <a href="https://www.facebook.com/MariaJoseGuerranutricionista" class="footer-social-link" rel="noopener" target="_blank">Facebook</a>
-          <span class="footer-social-sep">·</span>
-          <a href="https://wa.me/34664331157" class="footer-social-link" rel="noopener" target="_blank">WhatsApp</a>
-        </div>
-      </div>
-      <div>
+
         <div class="footer-col">
           <p class="footer-col-title">Programa</p>
           <ul>
@@ -755,8 +985,7 @@ justify-content:center;padding:120px 60px 80px 80px}
             <li><a href="#calendly">Solicitar evaluación</a></li>
           </ul>
         </div>
-      </div>
-      <div>
+
         <div class="footer-col">
           <p class="footer-col-title">Información</p>
           <ul>
@@ -766,67 +995,83 @@ justify-content:center;padding:120px 60px 80px 80px}
             <li><a href="https://www.youtube.com/@doshasnutricion59" rel="noopener" target="_blank">YouTube</a></li>
           </ul>
         </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Especialidades</p>
+          <ul>
+            <li><span>Nutricionista SIBO Barcelona</span></li>
+            <li><span>Especialista microbiota</span></li>
+            <li><span>Inflamación intestinal</span></li>
+            <li><span>Fatiga crónica</span></li>
+            <li><span>Gut health specialist Spain</span></li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-grid -->
+
+      <div class="footer-bottom">
+        <p>© 2026 Doshas · Nutrición de vida · María José Guerra Valdés · Barcelona, España</p>
+        <p>
+          Diseño y desarrollo ·
+          <a href="https://cirujanadigital.com" class="footer-credit-link" rel="noopener" target="_blank">CIRUJANA DIGITAL</a>
+          <span class="footer-credit-sub">Desarrollo Web De Alto Rendimiento · cirujanadigital.com</span>
+        </p>
+        <p>
+          <a href="/politica-de-privacidad.html" class="footer-legal-link">Privacidad</a> ·
+          <a href="/aviso-legal.html"            class="footer-legal-link">Aviso legal</a> ·
+          <a href="cookies.html"                 class="footer-legal-link">Cookies</a>
+        </p>
       </div>
-      <div class="footer-col">
-        <p class="footer-col-title">Especialidades</p>
-        <ul>
-          <li><span>Nutricionista SIBO Barcelona</span></li>
-          <li><span>Especialista microbiota</span></li>
-          <li><span>Inflamación intestinal</span></li>
-          <li><span>Fatiga crónica</span></li>
-          <li><span>Gut health specialist Spain</span></li>
-        </ul>
-      </div>
+
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Doshas · Nutrición de vida · María José Guerra Valdés · Barcelona, España</p>
-    <p>
-  Diseño y desarrollo ·
-  <a href="https://cirujanadigital.com" class="footer-credit-link" rel="noopener" target="_blank">CIRUJANA DIGITAL</a>
-  <span class="footer-credit-sub">Desarrollo Web De Alto Rendimiento · cirujanadigital.com</span>
-</p>
-      <p>
-        <a href="/politica-de-privacidad.html" class="footer-legal-link">Privacidad</a> ·
-        <a href="/aviso-legal.html" class="footer-legal-link">Aviso legal</a> ·
-        <a href="cookies.html" class="footer-legal-link">Cookies</a>
-      </p>
-    </div>
-  </div>
-</footer>
+  </footer>
+
 <!-- MODAL SELECTOR DE PAÍS -->
-<div class="country-modal-overlay" id="countryModal" role="dialog" aria-modal="true" aria-label="Seleccionar país">
-  <div class="country-modal">
-    <button class="country-modal-close" onclick="closeCountryModal()" aria-label="Cerrar">✕</button>
-    <span class="country-modal-eyebrow">Evaluación Reprogramación Digestiva</span>
-    <h3>¿Desde dónde reservas?</h3>
-    <p>Selecciona tu país para continuar con el pago seguro de 20 €</p>
-    <div class="country-modal-buttons">
-      <a href="https://buy.stripe.com/cNi7sN1OO5f6dpIgGZcwg0v"
-         class="btn-country"
-         target="_blank" rel="noopener"
-         onclick="closeCountryModal()">
-        <span class="btn-country-flag">🇪🇸</span>
-        <span class="btn-country-text">
-          <strong>España y resto del mundo</strong>
-          <span>Pago en euros · Stripe seguro</span>
-        </span>
-        <span class="btn-country-arrow">→</span>
-      </a>
-      <a href="https://buy.stripe.com/9B6fZjdxw8rifxQeyRcwg0w"
-         class="btn-country"
-         target="_blank" rel="noopener"
-         onclick="closeCountryModal()">
-        <span class="btn-country-flag">🇨🇱</span>
-        <span class="btn-country-text">
-          <strong>Chile</strong>
-          <span>Pago en pesos chilenos · Stripe seguro</span>
-        </span>
-        <span class="btn-country-arrow">→</span>
-      </a>
+<div
+    class="country-modal-overlay"
+    id="countryModal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Seleccionar país">
+
+    <div class="country-modal">
+      <button class="country-modal-close" onclick="closeCountryModal()" aria-label="Cerrar">✕</button>
+      <span class="country-modal-eyebrow">Evaluación Reprogramación Digestiva</span>
+      <h3>¿Desde dónde reservas?</h3>
+      <p>Selecciona tu país para continuar con el pago seguro de 20 €</p>
+
+      <div class="country-modal-buttons">
+        <a
+          href="https://buy.stripe.com/cNi7sN1OO5f6dpIgGZcwg0v"
+          class="btn-country"
+          target="_blank"
+          rel="noopener"
+          onclick="closeCountryModal()">
+          <span class="btn-country-flag">🇪🇸</span>
+          <span class="btn-country-text">
+            <strong>España y resto del mundo</strong>
+            <span>Pago en euros · Stripe seguro</span>
+          </span>
+          <span class="btn-country-arrow">→</span>
+        </a>
+        <a
+          href="https://buy.stripe.com/9B6fZjdxw8rifxQeyRcwg0w"
+          class="btn-country"
+          target="_blank"
+          rel="noopener"
+          onclick="closeCountryModal()">
+          <span class="btn-country-flag">🇨🇱</span>
+          <span class="btn-country-text">
+            <strong>Chile</strong>
+            <span>Pago en pesos chilenos · Stripe seguro</span>
+          </span>
+          <span class="btn-country-arrow">→</span>
+        </a>
+      </div>
+
+      <p class="country-modal-note">🔒 Pago 100 % seguro · Tras el pago recibirás el enlace para agendar tu cita</p>
     </div>
-    <p class="country-modal-note">🔒 Pago 100 % seguro · Tras el pago recibirás el enlace para agendar tu cita</p>
-  </div>
-</div>
-<script src="main.js" defer></script>
-</body>
-</html>
+
+  </div><!-- /country-modal-overlay -->
+
+  <script src="main.js" defer></script>
